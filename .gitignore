@@ -1,0 +1,40 @@
+### Customised .gitignore
+
+### JetBrains, WebStorm
+.idea
+
+### OSX
+.DS_Store
+
+### Node.gitignore
+node_modules
+
+### Bower
+bower_components
+
+### Other folders
+development
+release
+tmp
+.tmp
+
+### SASS.gitignore
+.sass-cache/
+*.css.map
+
+### Logs
+logs
+*.log
+npm-debug.log*
+
+### Others
+*.csv
+*.xml
+*.dat
+*.iml
+*.out
+*.sublime*
+*.swo
+*.swp
+*.tgz
+*.zip

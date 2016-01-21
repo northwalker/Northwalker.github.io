@@ -1,0 +1,28 @@
+{
+  "name": "northwalker-gitgub-io",
+  "description": "A github website for Northwalker",
+  "main": "index.html",
+  "authors": [
+    "Northwalker"
+  ],
+  "license": "MIT",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "overrides": {
+
+  },
+  "dependencies": {
+    "jquery":"2.2.0",
+    "underscore": "1.8.3",
+    "font-awesome":"4.5.0"
+  },
+  "devDependencies":{
+
+  }
+}
