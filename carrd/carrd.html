@@ -1,0 +1,543 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <title>Northwalker</title>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no"/>
+  <meta name="description" content="Description of Northwalker"/>
+  <link rel="icon" type="image/x-icon" href="https://www.gravatar.com/avatar/9a500e39e5c48a4693ea652374c7426a?s=16&d=identicon">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,200">
+  <style>
+    html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+      margin: 0;
+      padding: 0;
+      border: 0;
+      font-size: 100%;
+      font: inherit;
+      vertical-align: baseline;
+    }
+
+    article, aside, details, figcaption, figure, footer, header, menu, nav, section {
+      display: block;
+    }
+
+    body {
+      line-height: 1;
+    }
+
+    ol, ul {
+      list-style: none;
+    }
+
+    blockquote, q {
+      quotes: none;
+    }
+
+    blockquote:before, blockquote:after, q:before, q:after {
+      content: '';
+      content: none;
+    }
+
+    table {
+      border-collapse: collapse;
+      border-spacing: 0;
+    }
+
+    body {
+      -webkit-text-size-adjust: none
+    }
+
+    input::-moz-focus-inner {
+      border: 0;
+      padding: 0;
+    }
+
+    input, select, textarea {
+      -moz-appearance: none;
+      -webkit-appearance: none;
+      -ms-appearance: none;
+      appearance: none;
+    }
+
+    *, *:before, *:after {
+      box-sizing: border-box;
+    }
+
+    html {
+      height: 100%;
+      overflow: hidden;
+      font-size: 18pt;
+    }
+
+    body {
+      min-width: 320px;
+      line-height: 1.0;
+      height: 100%;
+      word-wrap: break-word;
+      overflow-x: hidden;
+      -webkit-overflow-scrolling: touch;
+      background-image: linear-gradient(135deg, #5BB359 0%, #49BEF2 65%);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-attachment: fixed;
+    }
+
+    strong {
+      color: inherit;
+      font-weight: bolder;
+    }
+
+    em {
+      font-style: italic;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: underline;
+    }
+
+    a:hover {
+      text-decoration: none;
+    }
+
+    body:before {
+      display: block;
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      /*background-color: #3E346E;*/
+      background-color: #49BEF2;
+      z-index: 1;
+      opacity: 0;
+      visibility: hidden;
+      -moz-transition: opacity 1s ease-in-out 0s, visibility 1s 0s;
+      -webkit-transition: opacity 1s ease-in-out 0s, visibility 1s 0s;
+      -ms-transition: opacity 1s ease-in-out 0s, visibility 1s 0s;
+      transition: opacity 1s ease-in-out 0s, visibility 1s 0s;
+    }
+
+    body.is-loading:before {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    #wrapper {
+      -webkit-overflow-scrolling: touch;
+      display: -moz-flex;
+      display: -webkit-flex;
+      display: -ms-flex;
+      display: flex;
+      -moz-flex-direction: column;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -moz-align-items: flex-start;
+      -webkit-align-items: flex-start;
+      -ms-align-items: flex-start;
+      align-items: flex-start;
+      -moz-justify-content: center;
+      -webkit-justify-content: center;
+      -ms-justify-content: center;
+      justify-content: center;
+      min-height: 100%;
+      position: relative;
+      z-index: 1;
+    }
+
+    #main {
+      display: -moz-flex;
+      display: -webkit-flex;
+      display: -ms-flex;
+      display: flex;
+      position: relative;
+      max-width: 100%;
+      z-index: 1;
+      -moz-align-items: center;
+      -webkit-align-items: center;
+      -ms-align-items: center;
+      align-items: center;
+      -moz-justify-content: center;
+      -webkit-justify-content: center;
+      -ms-justify-content: center;
+      justify-content: center;
+      text-align: left;
+    }
+
+    #main > .inner {
+      overflow-x: hidden;
+      width: 48rem;
+      max-width: 100%;
+      padding: 3.75rem 3rem;
+    }
+
+    #main > .inner > * {
+      margin: 1.5rem 0;
+      -moz-transition: opacity 1s ease-in-out 0s;
+      -webkit-transition: opacity 1s ease-in-out 0s;
+      -ms-transition: opacity 1s ease-in-out 0s;
+      transition: opacity 1s ease-in-out 0s;
+    }
+
+    #main > .inner > :first-child {
+      margin-top: 0 !important;
+    }
+
+    #main > .inner > :last-child {
+      margin-bottom: 0 !important;
+    }
+
+    #main > .inner > .image {
+      margin: 1.875rem 0;
+    }
+
+    #main > .inner > .video {
+      margin: 1.875rem 0;
+    }
+
+    body.is-loading #main > .inner > * {
+      opacity: 0;
+    }
+
+    #main > .inner > :nth-child(2) {
+      -moz-transition-delay: 0.125s;
+      -webkit-transition-delay: 0.125s;
+      -ms-transition-delay: 0.125s;
+      transition-delay: 0.125s;
+    }
+
+    #main > .inner > :nth-child(3) {
+      -moz-transition-delay: 0.25s;
+      -webkit-transition-delay: 0.25s;
+      -ms-transition-delay: 0.25s;
+      transition-delay: 0.25s;
+    }
+
+    #main > .inner > :nth-child(4) {
+      -moz-transition-delay: 0.375s;
+      -webkit-transition-delay: 0.375s;
+      -ms-transition-delay: 0.375s;
+      transition-delay: 0.375s;
+    }
+
+    #main > .inner > :nth-child(5) {
+      -moz-transition-delay: 0.5s;
+      -webkit-transition-delay: 0.5s;
+      -ms-transition-delay: 0.5s;
+      transition-delay: 0.5s;
+    }
+
+    #main > .inner > :nth-child(6) {
+      -moz-transition-delay: 0.625s;
+      -webkit-transition-delay: 0.625s;
+      -ms-transition-delay: 0.625s;
+      transition-delay: 0.625s;
+    }
+
+    #credits {
+      cursor: default;
+      margin-top: 1rem !important;
+      width: -moz-max-content;
+      width: -webkit-max-content;
+      width: -ms-max-content;
+      width: max-content;
+      color: #FFFFFF;
+      font-family: 'Source Sans Pro';
+      font-size: 0.8em;
+      line-height: 1.55;
+      font-weight: 200;
+    }
+
+    #credits a {
+      -moz-transition: opacity 0.25s ease;
+      -webkit-transition: opacity 0.25s ease;
+      -ms-transition: opacity 0.25s ease;
+      transition: opacity 0.25s ease;
+      opacity: 0.5;
+      text-decoration: none;
+    }
+
+    #credits a:hover {
+      opacity: 1;
+    }
+
+    .image {
+      position: relative;
+      overflow: hidden;
+      max-width: 100%;
+      display: block;
+    }
+
+    .image img {
+      width: 100%;
+      max-width: 100%;
+      display: inline-block;
+    }
+
+    #image01 img {
+      width: 8rem;
+      border-radius: 100%;
+    }
+
+    h1 br + br, p br + br {
+      display: block;
+      content: ' ';
+    }
+
+    #text03 br + br {
+      margin-top: 0.705rem;
+    }
+
+    #text03 {
+      color: #FFFFFF;
+      font-family: 'Source Sans Pro';
+      font-size: 3.375em;
+      line-height: 1.175;
+      font-weight: 400;
+    }
+
+    #text01 br + br {
+      margin-top: 0.93rem;
+    }
+
+    #text01 {
+      color: #FFFFFF;
+      font-family: 'Source Sans Pro';
+      font-size: 1.5em;
+      line-height: 1.55;
+      font-weight: 200;
+    }
+
+    #credits br + br {
+      margin-top: 0.93rem;
+    }
+
+    hr {
+      width: 100%;
+      position: relative;
+      padding: 0;
+      border: 0;
+    }
+
+    hr:before {
+      content: '';
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    #divider02 {
+      height: 0.5rem;
+      line-height: 0.5rem;
+    }
+
+    #divider02:before {
+      width: 10%;
+      background-color: rgba(255, 255, 255, 0.392);
+      height: 1px;
+    }
+
+    .icons {
+      cursor: default;
+      padding: 0;
+      letter-spacing: 0;
+    }
+
+    .icons li {
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    .icons li a {
+      display: block;
+      color: inherit;
+      text-decoration: none;
+      text-align: center;
+      letter-spacing: 0;
+    }
+
+    .icons li a .label {
+      display: none;
+    }
+
+    #icons01 {
+      font-size: 1.25em;
+    }
+
+    #icons01 li {
+      margin: 0.625rem 1.25rem 0.625rem 0;
+    }
+
+    #icons01 li:last-child {
+      margin-right: 0;
+    }
+
+    #icons01 li a {
+      border-radius: 0.5rem;
+    }
+
+    #icons01 .n01:before {
+      color: rgba(255, 255, 255, 0.392);
+    }
+
+    #icons01 .n02:before {
+      color: rgba(255, 255, 255, 0.392);
+    }
+
+    #icons01 .n03:before {
+      color: rgba(255, 255, 255, 0.392);
+    }
+
+    #icons01 .n04:before {
+      color: rgba(255, 255, 255, 0.392);
+    }
+
+    #icons01 .n05:before {
+      color: rgba(255, 255, 255, 0.392);
+    }
+
+    #icons01 .n06:before {
+      color: rgba(255, 255, 255, 0.392);
+    }
+
+    #icons01 .n07:before {
+      color: rgba(255, 255, 255, 0.392);
+    }
+
+    #icons01 .n08:before {
+      color: rgba(255, 255, 255, 0.392);
+    }
+
+    @media (max-width: 1680px) {
+      html {
+        font-size: 13pt;
+      }
+    }
+
+    @media (max-width: 1280px) {
+      html {
+        font-size: 13pt;
+      }
+    }
+
+    @media (max-width: 980px) {
+      html {
+        font-size: 11pt;
+      }
+    }
+
+    @media (max-width: 736px) {
+      html {
+        font-size: 11pt;
+      }
+
+      #main > .inner {
+        padding: 3rem 2rem;
+      }
+
+      #text03 {
+        font-size: 3em;
+      }
+    }
+
+    @media (max-width: 360px) {
+      #main > .inner {
+        padding: 2.5rem 1.25rem;
+      }
+
+      #icons01 li {
+        margin: 0.46875rem 0.9375rem 0.46875rem 0;
+      }
+    }
+  </style>
+  <noscript>
+    <style>
+      body {
+        overflow: auto !important;
+      }
+
+      body:before {
+        display: none !important;
+      }
+
+      #main > .inner > * {
+        opacity: 1.0 !important;
+        -moz-transform: none !important;
+        -webkit-transform: none !important;
+        -ms-transform: none !important;
+        transform: none !important;
+        -moz-transition: none !important;
+        -webkit-transition: none !important;
+        -ms-transition: none !important;
+        transition: none !important;
+        -moz-filter: none !important;
+        -webkit-filter: none !important;
+        -ms-filter: none !important;
+        filter: none !important;
+      }
+    </style>
+  </noscript>
+</head>
+<body class="is-loading">
+<div id="wrapper">
+  <div id="main">
+    <div class="inner">
+      <div class="image" id="image01">
+        <img src="https://avatars0.githubusercontent.com/u/7236270?v=3&s=400" alt="Northwalker"/>
+      </div>
+      <h1 id="text03">Northwalker</h1>
+      <hr id="divider02"/>
+      <p id="text01"><span>Font-end and back-end developer.</span><br/> <span>Skills : Node.JS, Angular.js, jQuery, HTML 5 ,CSS, Git, Backbone.js , Gulp, Material-Design, Ionic, Bootstrap.</span>
+      </p>
+      <ul class="icons" id="icons01">
+
+        <li><a class="fa fa-github n01" href="https://github.com/northwalker"><span class="label">github</span></a></li>
+        <li><a class="fa fa-stack-overflow n02" href="http://stackoverflow.com/"><span
+          class="label">stack-overflow</span></a></li>
+        <li><a class="fa fa-twitter n03" href="http://twitter.com"><span class="label">twitter</span></a></li>
+        <li><a class="fa fa-facebook n04" href="http://facebook.com"><span class="label">facebook</span></a></li>
+        <li><a class="fa fa-instagram n05" href="http://instagram.com"><span class="label">instagram</span></a></li>
+        <li><a class="fa fa-linkedin n06" href="http://linkedin.com"><span class="label">linkedin</span></a></li>
+        <li><a class="fa fa-phone n07"><span class="label">phone</span></a></li>
+        <li><a class="fa fa-envelope n08" href="mailto:northwalker@hotmail.com"><span class="label">email</span></a></li>
+      </ul>
+      <p id="credits"><a href="https://carrd.co">( Made with Carrd )</a></p></div>
+  </div>
+</div>
+<script>var d = document, b = d.body, on = addEventListener, st = setTimeout, ct = clearTimeout;
+on('load', function () {
+  st(function () {
+    b.className = b.className.replace(/\bis-loading\b/, 'is-playing');
+    st(function () {
+      b.className = b.className.replace(/\bis-playing\b/, 'is-ready')
+    }, 1625);
+  }, 100);
+});
+b.tabIndex = -1;
+var rf = function () {
+  st(function () {
+    b.focus();
+  }, 100);
+};
+on('load', rf);
+on('resize', rf);
+on('orientationchange', rf);
+if (navigator.userAgent.match(/(MSIE|rv:11\.0)/)) {
+  (function () {
+    var t, f;
+    f = function () {
+      var x = d.querySelector('#wrapper');
+      if (x.scrollHeight > innerHeight)x.style.height = 'auto'; else x.style.height = '100%';
+    };
+    (f)();
+    on('resize', function () {
+      ct(t);
+      t = st(f, 250);
+    });
+  })();
+}</script>
+</body>
+</html>
