@@ -10,13 +10,13 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
   <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,200">
 
-  <!-- Latest compiled and minified CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
-        integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <!--&lt;!&ndash; Latest compiled and minified CSS &ndash;&gt;-->
+  <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"-->
+  <!--integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">-->
 
-  <!-- Optional theme -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css"
-        integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+  <!--&lt;!&ndash; Optional theme &ndash;&gt;-->
+  <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css"-->
+  <!--integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">-->
 
   <link rel="stylesheet" href="./main/vendor/animate.min.css">
   <link rel="stylesheet" href="./main/css/main.css">
@@ -24,65 +24,77 @@
 
 <body>
 
-<header class="navbar navbar-fixed-top affix-top navbar-nw">
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
-              aria-expanded="false" aria-controls="navbar" style="border-color: #FFFFFF">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar" style="background-color: #FFFFFF"></span>
-        <span class="icon-bar" style="background-color: #FFFFFF"></span>
-        <span class="icon-bar" style="background-color: #FFFFFF"></span>
-      </button>
-      <a class="navbar-brand" href="/" >
-        <div class="navbar-nw-title">
-          <!--<img src="./N.png" alt="title-img" width="25" height="25">-->
-          <span>Northwalker</span>
-        </div>
-      </a>
-    </div>
-    <nav id="navbar" class="navbar-collapse collapse">
-      <ul class="nav navbar-nav navbar-right" id="idmenu">
-        <li>
-          <a class="" data-scroll href="#Home">Home</a>
-        </li>
-        <li>
-          <a class="" >Tool</a>
-        </li>
-        <!--<li>-->
-          <!--<a href="#">-->
-            <!--Tools <span class="caret"></span>-->
-          <!--</a>-->
-          <!--<ul class="dropdown-menu" >-->
-            <!--<li><a href="#">Tool 1</a></li>-->
-            <!--<li><a href="#">Tool 2</a></li>-->
-            <!--<li><a href="#">Tool 3</a></li>-->
-            <!--&lt;!&ndash;<li role="separator" class="divider"></li>&ndash;&gt;-->
-            <!--<li><a href="#">Taiwan Info. </a></li>-->
-          <!--</ul>-->
-        <!--</li>-->
-        <!--<li>-->
-        <!--<a href="./carrd/carrd.html" >Carrd</a>-->
-        <!--</li>-->
-        <li>
-          <a class="" data-scroll href="#Resume">Resume</a>
-        </li>
-        <li>
-          <a class="" data-scroll href="#Contact">Contact</a>
-        </li>
-      </ul>
-    </nav>
 
+<header class="navigation-nw">
 
+  <div class="navigation-nw-brand">
+    Northwalker
+    <a class="btn-nw" id="navigation-btn">
+      <i class="fa fa-align-justify" aria-hidden="true"></i>
+    </a>
+  </div>
+  <div class="navigation-nw-list">
+    <ul>
+      <li>
+        <a class="" data-scroll href="#Home">
+          <!--<i class="fa fa-home" aria-hidden="true"></i>-->
+          Home
+        </a>
+      </li>
+      <li style="display: none;">
+        <a class="">
+          <!--<i class="fa fa-wrench" aria-hidden="true"></i> -->
+           Tools
+        </a>
+        <ul style="z-index: 5000;">
+          <li>Web Tool 1</li>
+          <li>Web Tool 2</li>
+          <li>String Encode</li>
+          <li>Taiwan Info.</li>
+        </ul>
+      </li>
+      <li>
+        <a class="" data-scroll href="#Resume">
+          <!--<i class="fa fa-user" aria-hidden="true"></i> -->
+          About
+        </a>
+      </li>
+      <li>
+        <a class="" data-scroll href="#Contact">
+          <!--<i class="fa fa-paper-plane" aria-hidden="true"></i> -->
+          Contact
+        </a>
+      </li>
+    </ul>
+    <!--<a href="#">Home</a>-->
+    <!--<a href="#">Tools</a>-->
+    <!--<a href="#">Resume</a>-->
+    <!--<a href="#">Contact</a>-->
   </div>
 </header>
+
+<!--<header style="z-index: 5000;">-->
+<!--<ul><li>Home</li>-->
+<!--<li>About</li>-->
+<!--<li>-->
+<!--Portfolio-->
+<!--<ul style="z-index: 5000;">-->
+<!--<li>Web Design</li>-->
+<!--<li>Web Development</li>-->
+<!--<li>Illustrations</li>-->
+<!--</ul>-->
+<!--</li>-->
+<!--<li>Blog</li>-->
+<!--<li>Contact</li>-->
+<!--</ul>-->
+<!--</header>-->
 
 <div class="page-hero" id="Home">
   <div class="hero-container">
     <div class="container">
       <h2>Hello! I'm Northwalker</h2>
       <h3>Front-end and Back-end Developer</h3>
-      <a href="https://github.com/northwalker" target="_blank" class="btn btn-lg btn-nw">
+      <a href="https://github.com/northwalker" target="_blank" class="btn-nw">
         <i class="fa fa-github" aria-hidden="true"></i> Github
       </a>
     </div>
@@ -142,9 +154,9 @@
   <!-- Google Map -->
 </section>
 
-<footer class="footer" id="Contact">
-  <div class="row">
-    <div class="footerContent">
+<footer class="footer-nw" id="Contact">
+  <div>
+    <div class="footer-nw-content">
       <div>
         <a href="https://github.com/northwalker" target="_blank">
           <i class="fa fa-github fa-2x" aria-hidden="true"></i>
@@ -165,10 +177,10 @@
           <i class="fa fa-twitter fa-2x" aria-hidden="true"></i>
         </a>
         <!--<a href="https://www.facebook.com">-->
-          <!--<i class="fa fa-facebook fa-2x" aria-hidden="true"></i>-->
+        <!--<i class="fa fa-facebook fa-2x" aria-hidden="true"></i>-->
         <!--</a>-->
         <!--<a href="">-->
-          <!--<i class="fa fa-google-plus fa-2x" aria-hidden="true"></i>-->
+        <!--<i class="fa fa-google-plus fa-2x" aria-hidden="true"></i>-->
         <!--</a>-->
         <a href="./carrd/carrd.html">
           <i class="fa fa-home fa-2x" aria-hidden="true"></i>
@@ -177,7 +189,7 @@
           <i class="fa fa-linkedin fa-2x" aria-hidden="true"></i>
         </a>
       </div>
-      <div style="margin: 40px;">
+      <div class="copy-right">
         &copy 2016 Northwalker. All Rights Reserved.
       </div>
     </div>
@@ -186,10 +198,10 @@
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<!-- Latest compiled and minified JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
-        integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
-        crossorigin="anonymous"></script>
+<!--&lt;!&ndash; Latest compiled and minified JavaScript &ndash;&gt;-->
+<!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"-->
+<!--integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"-->
+<!--crossorigin="anonymous"></script>-->
 
 <!-- particles.js lib - https://github.com/VincentGarreau/particles.js -->
 <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
