@@ -2,11 +2,11 @@
 body {
   margin: 0;
   /*font: normal 75% Helvetica, Arial, sans-serif;*/
-  font-family: "open sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Arial,  微軟正黑體, sans-serif;;
   font-size: 16px;
 
   color: #000000;
-  background-color: #fff;
+  background-color: #000000;
 }
 
 canvas {
@@ -27,32 +27,254 @@ canvas {
   background-position: 50% 50%;
 }
 
-.navbar-nw {
-  height: 90px;
-  margin-bottom: 20px;
+/* ----- navigation-nw ----- */
 
-  font-size: 20px;
-  line-height: 20px;
-  border: 1px solid transparent;
+.navigation-nw {
+  z-index: 3500;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  color: #FFFFFF;
+  /*height: 90px;*/
+  min-height: 90px; /* 給予 RWD 彈性 */
+  text-align: center;
+  background: transparent;
+
+  display: -webkit-flex;
+  display: flex;
+}
+
+.navigation-nw-brand {
+  height: 90px;
+  cursor: pointer;
+  color: #FFFFFF;
+  font-size: 28px;
+
+  /*-webkit-transition: color .3s ease;*/
+  /*-moz-transition: color .3s ease;*/
+  /*-ms-transition: color .3s ease;*/
+  /*-o-transition: color .3s ease;*/
+  /*transition: color .3s ease;*/
+
+  /* div 垂直置中  */
+  display: -webkit-flex;
+  display: flex;
+
+  /*-webkit-flex: none;*/
+  /*flex: none;*/
+
+  -webkit-align-items: center;
+  align-items: center;
+
+  -webkit-flex: 1; /* flex-grow */
+  flex: 1;
+
+  justify-content: space-between;
+
+  margin-left: 150px;
+
+  /*border: 1px solid blue;*/
+}
+
+.navigation-nw-brand .btn-nw {
+  position: relative;
+  margin: 5px;
+  padding: 5px;
+
+  color: #FFFFFF;
+  text-decoration: none;
+  background: transparent;
+  border: 1px solid white;
+  border-radius: 3px;
+  z-index: 50;
+}
+.navigation-nw-list {
+  height: 90px;
+
+  display: -webkit-flex;
+  display: flex;
+
+  -webkit-flex-: 2; /* flex-grow */
+  flex: 2;
+
+  /* 垂直置中 */
+  -webkit-align-items: center;
+  align-items: center;
+  /* 水平靠右 */
+  -webkit-justify-content: flex-end;
+  justify-content: flex-end;
+
+  /*-webkit-margin-before: auto; !* margin-top:auto *!*/
+  /*-webkit-margin-after: auto; !* margin-bottom: auto *!*/
+  /*-webkit-margin-start: auto; !* margin-left: auto *!*/
+  /*margin-inline-start: auto; !* for Firefox *!*/
+
+  /*-webkit-margin-end: 100px; !* margin-right: 100px *!*/
+  /*margin-inline-end: 100px; !* for Firefox *!*/
+  margin-right: 100px; /* for unsupported -webkit-margin-end browser */
 
 }
 
-.navbar-nw-title {
+.navigation-nw-list > ul {
+  /*border: 1px solid green;*/
+}
 
-  /*margin-top: 18px;*/
-  font-size: 24px;
-  /*line-height: 24px;*/
+.navigation-nw-list ul li {
+
+  display: inline-block;
+  position: relative; /* dropdown position*/
+
+  /*cursor: pointer;*/
+  background-color: transparent;
+
+}
+
+.navigation-nw-list ul li a {
+  height: 90px;
+
+  cursor: pointer;
+  font-size: 20px;
+  text-align: center;
+  text-decoration: none;
+  color: #FFFFFF;
+  padding: 35px 15px;
+
+  -webkit-transition: color .3s ease;
+  -moz-transition: color .3s ease;
+  -ms-transition: color .3s ease;
+  -o-transition: color .3s ease;
+  transition: color .3s ease;
+}
+
+.navigation-nw-list ul li a:hover {
+  /*background: transparent;*/
+  color: #4994f2;
+}
+
+@media (max-width: 960px) {
+  .navigation-nw-brand {
+    height: 90px;
+    margin-left: 70px;
+  }
+
+  .navigation-nw-list {
+    margin-right: 15px;
+  }
+  .navigation-nw-list ul { }
+}
+
+@media (max-width: 768px) {
+
+  .navigation-nw {
+    /*display: flex;*/
+    -webkit-flex-direction: column;
+    flex-direction: column;
+  }
+
+  .navigation-nw-brand {
+
+    height: 90px;
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+
+  .navigation-nw-list {
+    height: auto;     /* 隨 ul li 增加*/
+
+    -webkit-justify-content: flex-start;
+    justify-content: flex-start;
+
+
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+
+  .navigation-nw-list ul {
+    width: 100%;
+    margin: 0 auto;
+
+    /*background-color: rgba(0, 0, 0, 0.9);*/
+    border-radius: 5px;
+
+  }
+
+  .navigation-nw-list ul li {
+    width: 100%;
+    text-align: left;
+  }
+
+  .navigation-nw-list ul li a {
+    width: 100%;
+    text-align: left;
+    line-height: 48px;
+    padding: 0;
+  }
+
+}
+
+.navigation-nw-list ul li ul {
+  text-align: left;
+  padding: 0;
+  position: absolute;
+  top: 48px;
+  left: 0;
+  width: 200px;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+
+  /* 利用 visibility & opacity 隱藏下拉式選單 */
+  /* 不使用 display: none; 會影響到 transition 效果 */
+  /*display: none;*/
+  visibility: hidden;
+  opacity: 0;
+
+  /* transition 只能使用 opacity, all 會影響hover到其他物件 */
+  /* TODO Safari 無transition 效果 */
+  -webkit-transition: opacity 1s ease-in;
+  -moz-transition: opacity 1s ease-in;
+  -ms-transition: opacity 1s ease-in;
+  -o-transition: opacity 1s ease-in;
+  transition: opacity 1s ease-in;
+}
+
+.navigation-nw-list ul li:hover ul {
+  /* 利用 visibility & opacity 開啟下拉式選單 */
+  display: block;
+  opacity: 1;
+  visibility: visible;
+}
+
+.navigation-nw-list ul li ul li {
+  display: block;
+  color: #FFFFFF;
+  background-color: rgba(0, 0, 0, 0.9); /* TODO 會被opacity 覆蓋 */
+  text-shadow: 0 -1px 0 #000;
+
+  padding: 15px;
+}
+
+.navigation-nw-list ul li ul li:hover {
+  cursor: pointer;
+  color: #4994f2;
+  background-color: #666666;
 }
 
 .navbar-nw-shadow {
-
   background-color: rgba(0, 0, 0, 0.6);
   /*opacity: 0.7;*/
   /*background-color: #000000;*/
   /* It's will apply opacity to child element, or use background-color: rgba(0,0,0,0.7) instead. */
   transition: all 0.3s ease-in-out;
-  moz-transition: all 0.3s ease-in-out;
-  webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+
+  /* Adds shadow to the bottom of the bar */
+  -webkit-box-shadow: 0px 0px 8px 0px #000000;
+  -moz-box-shadow: 0px 0px 8px 0px #000000;
+  box-shadow: 0px 0px 8px 0px #000000;
 
 }
 
@@ -63,79 +285,13 @@ canvas {
   moz-transition: all 0.3s ease-in-out;
   webkit-transition: all 0.3s ease-in-out;
 
+  /* Adds shadow to the bottom of the bar */
+  -webkit-box-shadow: 0px 0px 8px 0px #000000;
+  -moz-box-shadow: 0px 0px 8px 0px #000000;
+  box-shadow: 0px 0px 8px 0px #000000;
 }
 
-@media (max-width: 768px) {
-  nav {
-    background-color: rgba(0, 0, 0, 0.9);
-    border: 1px solid rgba(0, 0, 0, 1) !important;
-    border-radius: 5px;
-  }
-}
-
-.navbar-nw .navbar-brand {
-  height: 90px;
-  /*padding: 33px auto;*/
-  color: #fff;
-  font-size: 24px;
-
-  transition: color .3s ease;
-  moz-transition: color 1s ease;
-  -webkit-transition: color .3s ease;
-
-  /* div 垂直置中  */
-  display: -webkit-flex;
-  display: flex;
-
-  -webkit-flex: none;
-  flex: none;
-
-  -webkit-align-items: center;
-  align-items: center;
-
-}
-
-.navbar-nw .navbar-nav > li > a,
-.navbar-nw .navbar-nav > li > .btn {
-
-  -webkit-transition: color .3s ease;
-  transition: color .3s ease;
-  color: #fff;
-}
-
-.navbar-nw .navbar-nav > li > a:hover {
-  background: transparent;
-  color: #4994f2;
-}
-
-.navbar-nw .navbar-nav > li > a:focus {
-  background: transparent;
-  color: #4994f2;
-}
-
-.nav > li > a:focus, .nav > li > a:hover {
-  text-decoration: none;
-  background-color: #eee;
-}
-
-@media (min-width: 768px) {
-  .navbar-nw .navbar-nav > li {
-    padding: 0 10px;
-    min-height: 90px;
-
-    /* 垂直置中 */
-    display: -webkit-flex;
-    display: flex;
-
-    -webkit-flex: none;
-    flex: none;
-
-    -webkit-align-items: center;
-    align-items: center;
-  }
-}
-
-/* ---- page-hero ---- */
+/* ----- page-hero ----- */
 .page-hero {
   color: #fff;
   text-align: center;
@@ -172,9 +328,14 @@ canvas {
 
 .page-hero .btn-nw {
   position: relative;
+  margin: 15px;
+  padding: 15px;
+
   color: #FFFFFF;
+  text-decoration: none;
   background: transparent;
   border: 1px solid white;
+  border-radius: 3px;
   z-index: 50;
 }
 
@@ -198,6 +359,8 @@ canvas {
   /*bottom: -100px;*/
   z-index: 5;
 }
+
+/* ----- section-card ----- */
 
 .section-card {
   width: 100%;
@@ -273,11 +436,15 @@ canvas {
   font-weight: 900;
 }
 
+/* ----- section-education ----- */
+
 /*.section-education {*/
-  /*width: 100%;*/
-  /*height: 300px;*/
-  /*background-color: #FFFFFF;*/
+/*width: 100%;*/
+/*height: 300px;*/
+/*background-color: #FFFFFF;*/
 /*}*/
+
+/* ----- section-experience ----- */
 
 /*.section-experience {*/
 /*width: 100%;*/
@@ -290,29 +457,50 @@ canvas {
   height: 400px;
 }
 
-.footer {
+/* ----- footer-nw ----- */
+
+.footer-nw {
   width: 100%;
-  height: 200px;
   color: #FFFFFF;
   background-color: #2A2730;
 }
 
-.footer .footerContent {
+.footer-nw .footer-nw-content {
+
+  /*height: 200px;*/
+
+  width: 100%;
   color: #FFFFFF;
-  padding: 48px;
-  height: 150px;
+  background-color: #2A2730;
+
+  padding: 90px 0 20px 0; /* top right bottom left*/
+  color: #FFFFFF;
   text-shadow: none;
   text-align: center;
-  /*vertical-align: middle;*/
+
 }
 
-.footer .footerContent a {
+.footer-nw .footer-nw-content a {
   padding: 10px;
   text-decoration: none;
   color: #FFFFFF;
+
+  -webkit-transition: color .3s ease;
+  -moz-transition: color .3s ease;
+  -ms-transition: color .3s ease;
+  -o-transition: color .3s ease;
+  transition: color .3s ease;
 }
 
-.footer .footerContent a:hover {
-  text-decoration: none;
+.footer-nw .footer-nw-content a:hover {
   color: #E7746F;
+
 }
+
+.footer-nw .copy-right {
+  margin: 20px;
+}
+
+/* ============================================================ */
+/* ============================================================ */
+/* ============================================================ */
