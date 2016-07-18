@@ -12,36 +12,36 @@
 
   $(window).scroll(function () {
     if ($window.scrollTop() > 100)
-      $(".navigation-nw").addClass("navbar-nw-shadow");
+      $(".nw-navigation").addClass("nw-navbar-shadow");
     else
-      $(".navigation-nw").removeClass("navbar-nw-shadow");
+      $(".nw-navigation").removeClass("nw-navbar-shadow");
 
     if ($window.scrollTop() > 800)
-      $(".navigation-nw").addClass("navbar-nw-shadow-2x");
+      $(".nw-navigation").addClass("nw-navbar-shadow-2x");
     else
-      $(".navigation-nw").removeClass("navbar-nw-shadow-2x");
+      $(".nw-navigation").removeClass("nw-navbar-shadow-2x");
   });
 
   $(window).resize(function () {
     if ($window.width() > 768) {
       $("#navigation-btn").hide();
-      $(".navigation-nw-list").show();
+      $(".nw-navigation-list").show();
     }
     if ($window.width() < 768) {
       $("#navigation-btn").show();
-      $(".navigation-nw-list").hide();
+      $(".nw-navigation-list").hide();
     }
   });
 
   $('#navigation-btn').on('click', function () {
-    // $('#navigation-nw-list').show();
-    if ($('.navigation-nw-list').css("display") == 'none') {
-      $(".navigation-nw-list").show("slow", function () {
+    // $('#nw-navigation-list').show();
+    if ($('.nw-navigation-list').css("display") == 'none') {
+      $(".nw-navigation-list").show("slow", function () {
         //
       });
     }
     else {
-      $(".navigation-nw-list").hide("slow", function () {
+      $(".nw-navigation-list").hide("slow", function () {
         //
       });
     }
@@ -50,12 +50,12 @@
   function initNavigation() {
 
     if ($window.width() < 768) {
-      $(".navigation-nw-list").hide();
+      $(".nw-navigation-list").hide();
       $("#navigation-btn").show();
     }
     else {
       $("#navigation-btn").hide();
-      $(".navigation-nw-list").show();
+      $(".nw-navigation-list").show();
     }
   }
 
@@ -76,7 +76,7 @@
     var marker = new google.maps.Marker({
       position: myLatLng,
       map: map,
-      title: 'Hello! Northwalker!'
+      title: 'Hello, Northwalker!'
     });
   }
 
