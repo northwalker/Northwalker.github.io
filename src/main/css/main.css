@@ -45,7 +45,6 @@ canvas {
 
 .nw-navigation-brand {
   height: 90px;
-  cursor: pointer;
   color: #FFFFFF;
   font-size: 28px;
 
@@ -73,6 +72,12 @@ canvas {
   margin-left: 150px;
 
   /*border: 1px solid blue;*/
+}
+.nw-navigation-brand .nw-navigation-brand-title {
+
+  cursor: pointer;
+  color: white;
+  text-decoration: none;
 }
 
 .nw-navigation-brand #navigation-btn {
