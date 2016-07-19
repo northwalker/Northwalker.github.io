@@ -1,7 +1,7 @@
 (function () {
   'use strict';
   /* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
-  particlesJS.load('particles-js', './src/main/vendor/particlesjs/particlesjs-config.json', function () {
+  particlesJS.load('particles-js', 'assets/js/particlesjs-config.json', function () {
     console.log('callback - particles.js config loaded');
   });
 
@@ -64,8 +64,8 @@
   function initMap() {
     var myLatLng = {lat: 25.058465, lng: 121.5548159};
 
-    var map = new google.maps.Map(document.getElementById('gmap'), {
-      zoom: 14,
+    var map = new google.maps.Map(document.getElementById('GoogleMap'), {
+      zoom: 13,
       center: myLatLng,
       draggable: false,
       // disableDefaultUI: true,
