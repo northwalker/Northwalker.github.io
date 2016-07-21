@@ -36,12 +36,12 @@
   $('#navigation-btn').on('click', function () {
     // $('#nw-navigation-list').show();
     if ($('.nw-navigation-list').css("display") == 'none') {
-      $(".nw-navigation-list").show("slow", function () {
+      $(".nw-navigation-list").show(300, function () {
         //
       });
     }
     else {
-      $(".nw-navigation-list").hide("slow", function () {
+      $(".nw-navigation-list").hide(300, function () {
         //
       });
     }
@@ -52,6 +52,8 @@
     if ($window.width() < 768) {
       $(".nw-navigation-list").hide();
       $("#navigation-btn").show();
+
+      $(".navigation-btn").show();
     }
     else {
       $("#navigation-btn").hide();
