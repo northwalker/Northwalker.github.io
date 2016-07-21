@@ -83,7 +83,12 @@ canvas {
 .nw-navigation-brand #navigation-btn {
   /* default */
   display: none;
+
+  cursor: pointer;
 }
+
+
+
 .nw-navigation-brand .nw-navigation-brand-btn {
   padding: 5px;
   color: #ffffff;
@@ -156,6 +161,7 @@ canvas {
   color: #4994f2;
 }
 
+
 @media (max-width: 960px) {
   .nw-navigation-brand {
     height: 90px;
@@ -183,6 +189,15 @@ canvas {
     margin-right: 15px;
   }
 
+  .nw-navigation-brand #navigation-btn:hover {
+    color: #4994f2;
+    border-color: #4994f2;
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -ms-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;
+  }
   .nw-navigation-list {
     height: auto;     /* 隨 ul li 增加*/
 
@@ -349,6 +364,7 @@ canvas {
   border: 1px solid white;
   border-radius: 5px;
   z-index: 50;
+  cursor: pointer;
 }
 
 .page-hero .nw-btn:hover {

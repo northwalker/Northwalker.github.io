@@ -11,12 +11,12 @@
   var $window = $(window);
 
   $(window).scroll(function () {
-    if ($window.scrollTop() > 100)
+    if ($window.scrollTop() > 100 && $window.width() > 768)
       $(".nw-navigation").addClass("nw-navbar-shadow");
     else
       $(".nw-navigation").removeClass("nw-navbar-shadow");
 
-    if ($window.scrollTop() > 800)
+    if ($window.scrollTop() > 800 || $window.width() <= 768)
       $(".nw-navigation").addClass("nw-navbar-shadow-2x");
     else
       $(".nw-navigation").removeClass("nw-navbar-shadow-2x");
@@ -53,7 +53,7 @@
       $(".nw-navigation-list").hide();
       $("#navigation-btn").show();
 
-      $(".navigation-btn").show();
+      $(".nw-navigation").addClass("nw-navbar-shadow-2x");
     }
     else {
       $("#navigation-btn").hide();
