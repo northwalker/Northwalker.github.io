@@ -1,12 +1,33 @@
 (function () {
   'use strict';
+
   /* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
   particlesJS.load('particles-js', 'assets/js/particlesjs-config.json', function () {
-    console.log('callback - particles.js config loaded');
+    // console.log('callback - particles.js config loaded');
   });
 
-  /* smmoth scroll init */
-  smoothScroll.init();
+  $('.goToHome').click(function(){
+    // $body.animate({
+    //   scrollTop: 0
+    // }, 600);
+    $('html, body').animate({
+      scrollTop: $("#Home").offset().top
+    }, 600);
+
+    return false;
+  });
+  $('.goToResume').click(function(){
+    $('html, body').animate({
+      scrollTop: $("#Resume").offset().top
+    }, 600);
+    return false;
+  });
+  $('.goToContact').click(function(){
+    $('html, body').animate({
+      scrollTop: $("#Contact").offset().top
+    }, 600);
+    return false;
+  });
 
   var $window = $(window);
 
