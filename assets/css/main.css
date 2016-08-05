@@ -19,9 +19,9 @@ canvas {
   position: absolute;
   width: 100%;
   height: 780px;
-  background-color: #080a1e;
+  background-color: #000017;
   /*background-color: #000000;*/
-  /*background-image: url("");*/
+  /*background: url('https://static.northwalker.site/background/ST-sky-lantern.jpg') no-repeat center center fixed;*/
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50% 50%;
@@ -79,6 +79,7 @@ canvas {
   cursor: pointer;
   color: white;
   text-decoration: none;
+
 }
 
 .nw-navigation-brand #navigation-btn {
@@ -138,13 +139,33 @@ canvas {
   /*cursor: pointer;*/
   background-color: transparent;
 
+  padding-left: 15px;
+
 }
 
+
+.nw-navigation-list ul li:after {
+  /*底線動畫*/
+  content: '';
+  display: block;
+  margin: auto;
+  height: 5px;
+  width: 0px;
+  background: transparent;
+  transition: width .5s ease, background-color .5s ease;
+}
+
+
+.nw-navigation-list ul li:hover:after {
+  /*底線動畫*/
+  width: 100%;
+  background: #4994f2;
+}
 .nw-navigation-list ul li a {
   height: 90px;
 
   cursor: pointer;
-  font-size: 20px;
+  font-size: 24px;
   text-align: center;
   text-decoration: none;
   color: #FFFFFF;
@@ -157,6 +178,8 @@ canvas {
   transition: color .3s ease;
 }
 
+
+
 .nw-navigation-list ul li a:hover {
   /*background: transparent;*/
   color: #4994f2;
@@ -166,13 +189,15 @@ canvas {
 @media (max-width: 960px) {
   .nw-navigation-brand {
     height: 90px;
-    margin-left: 70px;
+    margin-left: 60px;
   }
 
   .nw-navigation-list {
     margin-right: 15px;
   }
-  .nw-navigation-list ul { }
+  .nw-navigation-list ul {
+    padding-left: 0px; /*overwrite*/
+  }
 }
 
 @media (max-width: 768px) {
@@ -230,6 +255,7 @@ canvas {
     line-height: 48px;
     padding: 0;
   }
+
 
 }
 
@@ -358,21 +384,31 @@ canvas {
 
   padding: 15px;
 
+  fill: #FFFFFF;  /* For SVG icon */
   color: #FFFFFF;
   font-size: 22px;
   text-decoration: none;
   background: transparent;
-  border: 1px solid white;
+  border: 2px solid white;
   border-radius: 5px;
   z-index: 50;
   cursor: pointer;
 }
 
 .page-hero .nw-btn:hover {
+  fill: #4994f2;  /* For SVG icon */
   color: #4994f2;
   background: transparent;
   border: 2px solid #4994f2;
+
+  -webkit-transition: all .3s ease;
+  -moz-transition: all .3s ease;
+  -ms-transition: all .3s ease;
+  -o-transition: all .3s ease;
+  transition: all .3s ease;
+
 }
+
 
 #le-dots {
   position: absolute;
@@ -390,7 +426,7 @@ canvas {
 
 /* ----- section-card ----- */
 
-.section-card {
+.card {
   width: 100%;
   /*height: 780px;*/
   min-height: 780px; /* RWD*/
@@ -403,9 +439,22 @@ canvas {
   background-image: -webkit-linear-gradient(135deg, #5BB359 0%, #49BEF2 65%);
   background-image: -o-linear-gradient(135deg, #5BB359 0%, #49BEF2 65%);
   background-image: -moz-linear-gradient(135deg, #5BB359 0%, #49BEF2 65%);
+  background-image: -ms-linear-gradient(135deg, #5BB359 0%, #49BEF2 65%);
   background-image: linear-gradient(135deg, #5BB359 0%, #49BEF2 65%);
   /*style-3*/
-  background-image: linear-gradient(45deg, #4361c2, #4fa49a 50%, #9dc66b 95%);
+  /*background-image: linear-gradient(45deg, #4361c2, #4fa49a 50%, #9dc66b 95%);*/
+
+
+
+  /*background-color: #bad0b8;*/
+  /*background-image: -webkit-linear-gradient(right, #FC7864, #FDA366);*/
+  /*background-image: -moz-linear-gradient(right, #FC7864, #FDA366);*/
+  /*background-image: -o-linear-gradient(right, #FC7864, #FDA366);*/
+  /*background-image: -ms-linear-gradient(right, #FC7864, #FDA366);*/
+  /*background-image: linear-gradient(right, #FC7864, #FDA366);*/
+
+
+
 }
 
 #card-content {
@@ -469,9 +518,116 @@ canvas {
   font-weight: 900;
 }
 
+/* ----- section-skill ----- */
+
+.skills{
+  height: 350px;
+  background-color: #D3D3D3;
+
+  background: #141E30; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #141E30 , #243B55); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #141E30 , #243B55); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+}
+
+.skills-container{
+  padding: 30px 150px;
+}
+
+@media (max-width: 900px) {
+  .skills-container {
+    padding: 100px 50px;
+  }
+}
+
+@media (max-width: 900px) {
+  .skills-container {
+    padding: 30px 50px;
+  }
+}
+
+@media (max-width: 768px) {
+  .skills-container {
+    padding: 30px 15px;
+  }
+}
+
+.skillbar {
+  position:relative;
+  display:block;
+  margin-bottom:15px;
+  width:100%;
+  background:#eee;
+  height:35px;
+  border-radius:3px;
+  -moz-border-radius:3px;
+  -webkit-border-radius:3px;
+  -webkit-transition:0.4s linear;
+  -moz-transition:0.4s linear;
+  -ms-transition:0.4s linear;
+  -o-transition:0.4s linear;
+  transition:0.4s linear;
+  -webkit-transition-property:width, background-color;
+  -moz-transition-property:width, background-color;
+  -ms-transition-property:width, background-color;
+  -o-transition-property:width, background-color;
+  transition-property:width, background-color;
+}
+
+.skillbar-title {
+  position:absolute;
+  top:0;
+  left:0;
+  font-weight:bold;
+  font-size:13px;
+  color:#fff;
+  background:#6adcfa;
+  -webkit-border-top-left-radius:3px;
+  -webkit-border-bottom-left-radius:4px;
+  -moz-border-radius-topleft:3px;
+  -moz-border-radius-bottomleft:3px;
+  border-top-left-radius:3px;
+  border-bottom-left-radius:3px;
+}
+
+.skillbar-title span {
+  display:block;
+  background:rgba(0, 0, 0, 0.1);
+  padding:0 20px;
+  height:35px;
+  line-height:35px;
+  -webkit-border-top-left-radius:3px;
+  -webkit-border-bottom-left-radius:3px;
+  -moz-border-radius-topleft:3px;
+  -moz-border-radius-bottomleft:3px;
+  border-top-left-radius:3px;
+  border-bottom-left-radius:3px;
+}
+
+.skillbar-bar {
+  height:35px;
+  width:0px;
+  background:#6adcfa;
+  border-radius:3px;
+  -moz-border-radius:3px;
+  -webkit-border-radius:3px;
+}
+
+.skill-bar-percent {
+  position:absolute;
+  right:10px;
+  top:0;
+  font-size:11px;
+  height:35px;
+  line-height:35px;
+  color:#444;
+  color:rgba(0, 0, 0, 0.4);
+}
+
 /* ----- section-education ----- */
 
-/*.section-education {*/
+/*.education {*/
 /*width: 100%;*/
 /*height: 300px;*/
 /*background-color: #FFFFFF;*/
@@ -479,7 +635,7 @@ canvas {
 
 /* ----- section-experience ----- */
 
-/*.section-experience {*/
+/*.experience {*/
 /*width: 100%;*/
 /*height: 300px;*/
 /*background-color: #FFFFFF;*/
@@ -488,15 +644,14 @@ canvas {
 
 /* ----- section-contact ----- */
 
-.section-contact {
+.contact {
   width: 100%;
   height: 300px;
   background-image: url('https://static.northwalker.site/background/ST-sky-lantern.jpg');
 
 }
 
-
-.section-contact .section-contact-container {
+.contact-container {
 
   padding: 150px 15px 60px;
   display: -webkit-flex;
@@ -538,7 +693,7 @@ canvas {
 
 /* ----- section-additional ----- */
 
-.section-additional {
+.additional {
   width: 100%;
   height: 300px;
   /*background-color: #1D9C72;*/
@@ -546,11 +701,10 @@ canvas {
   background-image:  linear-gradient(75deg, #FF7088 15%, #F2B69D 55%);
   background-color: #f08c89;
 
-
   display: none;
 }
 
-.section-additional .section-additional-container {
+.additional-container {
 
   padding: 100px 15px 60px;
   display: flex;
@@ -587,6 +741,7 @@ canvas {
   /*text-shadow: 4px 3px 0 #1d9d74,9px 8px 0 rgba(0,0,0,0.15);*/
   /*text-shadow: 4px 3px 0 #f08c89,9px 8px 0 rgba(0,0,0,0.15);*/
 }
+
 .additional-info-icon  {
   margin: auto 10px;
   font-size: 40px;
@@ -594,7 +749,7 @@ canvas {
 
 /* ----- section-gmap ----- */
 
-.section-gmap {
+.map {
   width: 100%;
   height: 400px;
 }
@@ -646,3 +801,25 @@ canvas {
 /* ============================================================ */
 /* ============================================================ */
 /* ============================================================ */
+
+.icon-vertical-align {
+  vertical-align: middle;
+}
+
+.padding-bottom-5 {
+  padding-bottom: 5px;
+}
+
+
+.nw-footer-icon svg {
+  cursor: pointer;
+  fill: #FFFFFF;
+}
+.nw-footer-icon svg:hover {
+  fill: #E7746F;
+  -webkit-transition: all .3s ease;
+  -moz-transition: all .3s ease;
+  -ms-transition: all .3s ease;
+  -o-transition: all .3s ease;
+  transition: all .3s ease;
+}
