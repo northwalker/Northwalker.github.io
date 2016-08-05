@@ -28,13 +28,13 @@
       $(".nw-navigation").removeClass("nw-navbar-shadow-2x");
 
     if ($window.scrollTop() > 400) {
-      $('#card-content').css('visibility', 'visible');
-      $('#card-content').addClass('animated fadeInUp');
+      $('#card-container').css('visibility', 'visible');
+      $('#card-container').addClass('animated fadeInUp');
     }
 
     if ($window.scrollTop() > 1500) {
-      $('.section-contact-container').css('visibility', 'visible');
-      $('.section-contact-container').addClass('animated flipInX');
+      $('.contact-container').css('visibility', 'visible');
+      $('.contact-container').addClass('animated flipInX');
     }
 
     // writePosition();
@@ -140,8 +140,8 @@
   initSkillBar();
 
   function init() {
-    $('#card-content').css('visibility', 'hidden');
-    $('.section-contact-container').css('visibility', 'hidden');
+    $('#card-container').css('visibility', 'hidden');
+    $('.contact-container').css('visibility', 'hidden');
   }
 
   init();

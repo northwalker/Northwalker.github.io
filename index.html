@@ -8,18 +8,19 @@
   <link rel="icon" type="image/x-icon" href="assets/images/N2.png">
 
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Archivo+Black|Tangerine|Lato" rel="stylesheet">
+
   <!-- Animate.css -->
   <link rel="stylesheet" href="assets/css/animate.min.css">
   <link rel="stylesheet" href="assets/css/main.css">
 </head>
 
 <body>
-<div id="positionInfo" style="position: fixed; top: 0; right: 0; z-index: 5500; color: lightgreen;" ></div>
-
+<!--<div id="positionInfo" style="position: fixed; top: 0; right: 0; z-index: 5500; color: lightgreen;"></div>-->
 <header class="nw-navigation">
 
   <div class="nw-navigation-brand">
-    <a class="nw-navigation-brand-title" href="/">Northwalker.site</a>
+    <a class="nw-navigation-brand-title fontTangerine" href="/">Northwalker</a>
     <a class="nw-navigation-brand-btn" id="navigation-btn">
       <i class="icon-vertical-align padding-bottom-5 material-icons">menu</i>
     </a>
@@ -63,14 +64,14 @@
 <div class="page-hero" id="Home">
   <div class="hero-container">
     <div class="container">
-      <div class="title-1">Hello! I'm Northwalker</div>
-      <div class="title-2">Front-end and Back-end Developer</div>
+      <div class="title-1 fontArchivoBlack ">Hello! I'm Northwalker</div>
+      <div class="title-2 fontLato">Front-end and Back-end Developer</div>
       <a href="https://github.com/northwalker" target="_blank" class="nw-btn">
         <svg id="icon-github" width="22" height="22" viewBox="0 0 32 32">
           <path
             d="M16 0.395c-8.836 0-16 7.163-16 16 0 7.069 4.585 13.067 10.942 15.182 0.8 0.148 1.094-0.347 1.094-0.77 0-0.381-0.015-1.642-0.022-2.979-4.452 0.968-5.391-1.888-5.391-1.888-0.728-1.849-1.776-2.341-1.776-2.341-1.452-0.993 0.11-0.973 0.11-0.973 1.606 0.113 2.452 1.649 2.452 1.649 1.427 2.446 3.743 1.739 4.656 1.33 0.143-1.034 0.558-1.74 1.016-2.14-3.554-0.404-7.29-1.777-7.29-7.907 0-1.747 0.625-3.174 1.649-4.295-0.166-0.403-0.714-2.030 0.155-4.234 0 0 1.344-0.43 4.401 1.64 1.276-0.355 2.645-0.532 4.005-0.539 1.359 0.006 2.729 0.184 4.008 0.539 3.054-2.070 4.395-1.64 4.395-1.64 0.871 2.204 0.323 3.831 0.157 4.234 1.026 1.12 1.647 2.548 1.647 4.295 0 6.145-3.743 7.498-7.306 7.895 0.574 0.497 1.085 1.47 1.085 2.963 0 2.141-0.019 3.864-0.019 4.391 0 0.426 0.288 0.925 1.099 0.768 6.354-2.118 10.933-8.113 10.933-15.18 0-8.837-7.164-16-16-16z"></path>
         </svg>
-          Github
+        Github
       </a>
     </div>
   </div>
@@ -78,10 +79,8 @@
     <div id="particles-js"></div>
   </div>
 </div>
-
 <section class="card" id="About">
-
-  <div id="card-content" class="">
+  <div id="card-container" class="">
     <div id="card-image01">
       <!--<img src="https://avatars.githubusercontent.com/u/7236270" alt="Northwalker"/>-->
       <img src="assets/images/thumbnail.jpg" alt="Northwalker"/>
@@ -96,8 +95,9 @@
         <div class="card-text-color01 card-text-weight900">Technical Skills</div>
         <span class="card-text-color01">Programming Languages:</span> Node.js, Javascript, HTML/CSS, PHP, JAVA, Shell
         Script<br/>
-        <span class="card-text-color01">Framework/Library:</span> Loopback.js, Angular.js, jQuery, Backbone.js, Bootstrap, Ionic,
-         Angular Material<br/>
+        <span class="card-text-color01">Framework/Library:</span> Loopback.js, Angular.js, jQuery, Backbone.js,
+        Bootstrap, Ionic,
+        Angular Material<br/>
         <span class="card-text-color01">Source Code Control/Workflow:</span> Git, SVN, Gulp <br/>
         <span class="card-text-color01">Programming Editors/IDEs:</span> JetBrains WebStorm, Atom, Sublime Text 2,
         GitHub <br/>
@@ -107,8 +107,6 @@
       </div>
     </div>
   </div>
-
-
 </section>
 
 <section class="education" id="Education">
@@ -175,7 +173,6 @@
     <div class="additional-info">
       <span class="additional-info-text">Additional Info.</span>
       <span class="additional-info-icon">
-        <!--<i class="fa fa-fighter-jet" aria-hidden="true"></i>-->
       </span>
     </div>
   </div>
@@ -187,7 +184,7 @@
 </section>
 
 <footer class="nw-footer">
-  <div>
+  <div class="nw-footer-container">
     <div class="nw-footer-content">
       <div>
         <a class="nw-footer-icon" href="https://github.com/northwalker" target="_blank">
@@ -250,11 +247,6 @@
 <!-- particles.js lib - https://github.com/VincentGarreau/particles.js -->
 <!--<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>-->
 <script src="assets/js/particles.min.js"></script>
-<!--<script src="assets/js/wow.min.js"></script>-->
-
-
-
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.2.1/Chart.min.js"></script>
 
 <script src="assets/js/main.js"></script>
 

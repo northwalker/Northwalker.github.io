@@ -14,6 +14,16 @@ canvas {
   vertical-align: bottom;
 }
 
+.fontArchivoBlack{
+  font-family: 'Archivo Black', sans-serif;
+}
+.fontTangerine{
+  font-family: 'Tangerine', cursive;
+}
+.fontLato{
+  font-family: 'Lato', sans-serif;
+}
+
 /* ---- particles.js container ---- */
 #particles-js {
   position: absolute;
@@ -47,7 +57,7 @@ canvas {
 .nw-navigation-brand {
   height: 90px;
   color: #FFFFFF;
-  font-size: 28px;
+  font-size: 44px;
 
   /*-webkit-transition: color .3s ease;*/
   /*-moz-transition: color .3s ease;*/
@@ -98,6 +108,7 @@ canvas {
   border-radius: 5px;
   text-decoration: none;
   background: transparent;
+  font-size: 30px;
 }
 
 .nw-navigation-list {
@@ -186,7 +197,7 @@ canvas {
 }
 
 
-@media (max-width: 960px) {
+@media (max-width: 1024px) {
   .nw-navigation-brand {
     height: 90px;
     margin-left: 60px;
@@ -370,7 +381,7 @@ canvas {
   top:430px;
   position: relative;
 
-  font-size: 22px;
+  font-size: 28px;
   /*font-weight: 300;*/
 
   z-index: 50;
@@ -457,24 +468,24 @@ canvas {
 
 }
 
-#card-content {
+#card-container {
   padding: 120px 150px;
 }
 
 @media (max-width: 1200px) {
-  #card-content {
+  #card-container {
     padding: 100px 50px;
   }
 }
 
 @media (max-width: 900px) {
-  #card-content {
+  #card-container {
     padding: 100px 50px;
   }
 }
 
 @media (max-width: 768px) {
-  #card-content {
+  #card-container {
     padding: 100px 15px;
   }
 }
