@@ -1,0 +1,35 @@
+{
+  "name": "northwalker-github-io",
+  "version": "0.1.1",
+  "description": "Github website for Northwalker",
+  "scripts": {
+    "build": "gulp build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/northwalker/Northwalker.github.io.git"
+  },
+  "author": "Northwalker",
+  "bugs": {
+    "url": "https://github.com/northwalker/Northwalker.github.io/issues"
+  },
+  "homepage": "https://github.com/northwalker/Northwalker.github.io#readme",
+  "devDependencies": {
+    "browser-sync": "^2.18.8",
+    "del": "^2.2.2",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-csso": "^3.0.0",
+    "gulp-eslint": "^3.0.1",
+    "gulp-git": "^2.1.0",
+    "gulp-html-replace": "^1.6.2",
+    "gulp-htmlmin": "^3.0.0",
+    "gulp-replace": "^0.5.4",
+    "gulp-sass": "^3.1.0",
+    "gulp-size": "^2.1.0",
+    "gulp-uglify": "^2.1.2",
+    "path": "^0.12.7",
+    "run-sequence": "^1.2.2"
+  }
+}

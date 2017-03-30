@@ -5,14 +5,23 @@
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no"/>
   <meta name="description" content="Website of Northwalker"/>
-  <link rel="icon" type="image/x-icon" href="assets/images/N2.png">
+  <meta name="version" content=""/>
+  <meta name="git-hash" content=""/>
+  <link rel="icon" type="image/x-icon" href="favicon.png">
 
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Archivo+Black|Tangerine|Lato" rel="stylesheet">
 
+  <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"-->
+  <!--integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous"/>-->
+
+  <!-- build:css -->
   <!-- Animate.css -->
-  <link rel="stylesheet" href="assets/css/animate.min.css">
-  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="./src/css/font-awesome.min.css">
+  <link rel="stylesheet" href="./src/css/animate.min.css">
+  <link rel="stylesheet" href="./src/css/main.css">
+  <!-- endbuild -->
+
 </head>
 
 <body>
@@ -20,9 +29,11 @@
 <header class="nw-navigation">
 
   <div class="nw-navigation-brand">
-    <a class="nw-navigation-brand-title fontTangerine" href="/">De-Yi Huang</a>
+    <a class="nw-navigation-brand-title fontTangerine" href="/">Northwalker</a>
     <a class="nw-navigation-brand-btn" id="navigation-btn">
-      <i class="icon-vertical-align padding-bottom-5 material-icons">menu</i>
+      <i class="fa fa-bars" aria-hidden="true"></i>
+      <!-- if no font-awesome-->
+      <!--<i class="icon-vertical-align padding-bottom-5 material-icons">menu</i>-->
     </a>
   </div>
   <div class="nw-navigation-list">
@@ -64,22 +75,16 @@
 <div class="page-hero" id="Home">
   <div class="hero-container">
     <div class="container">
-      <div class="title-1 fontArchivoBlack ">Hello! I'm De-Yi Huang</div>
-      <div class="title-2 fontLato">Front-end and Back-end Developer</div>
+      <div class="title-1 fontArchivoBlack ">Hello! I'm Northwalker</div>
+      <div class="title-2 fontLato">Front-end and Back-end Engineer</div>
       <a href="https://github.com/northwalker" class="nw-btn">
-        <svg id="icon-github" width="22" height="22" viewBox="0 0 32 32">
-          <path
-            d="M16 0.395c-8.836 0-16 7.163-16 16 0 7.069 4.585 13.067 10.942 15.182 0.8 0.148 1.094-0.347 1.094-0.77 0-0.381-0.015-1.642-0.022-2.979-4.452 0.968-5.391-1.888-5.391-1.888-0.728-1.849-1.776-2.341-1.776-2.341-1.452-0.993 0.11-0.973 0.11-0.973 1.606 0.113 2.452 1.649 2.452 1.649 1.427 2.446 3.743 1.739 4.656 1.33 0.143-1.034 0.558-1.74 1.016-2.14-3.554-0.404-7.29-1.777-7.29-7.907 0-1.747 0.625-3.174 1.649-4.295-0.166-0.403-0.714-2.030 0.155-4.234 0 0 1.344-0.43 4.401 1.64 1.276-0.355 2.645-0.532 4.005-0.539 1.359 0.006 2.729 0.184 4.008 0.539 3.054-2.070 4.395-1.64 4.395-1.64 0.871 2.204 0.323 3.831 0.157 4.234 1.026 1.12 1.647 2.548 1.647 4.295 0 6.145-3.743 7.498-7.306 7.895 0.574 0.497 1.085 1.47 1.085 2.963 0 2.141-0.019 3.864-0.019 4.391 0 0.426 0.288 0.925 1.099 0.768 6.354-2.118 10.933-8.113 10.933-15.18 0-8.837-7.164-16-16-16z"></path>
-        </svg>
+        <i class="fa fa-github" aria-hidden="true"></i>
         Github
       </a>
-      <a href="https://static.northwalker.site/resume/De-Yi+Huang+Resume.pdf" target="_blank" class="nw-btn">
-        <svg id="icon-cloud" width="22" height="22" viewBox="0 0 32 32">
-          <path
-            d="M32 20.548c0-2.565-1.771-4.716-4.156-5.296-0.101-4.022-3.389-7.252-7.433-7.252-2.369 0-4.477 1.109-5.839 2.835-0.764-0.987-1.959-1.624-3.303-1.624-2.307 0-4.176 1.871-4.176 4.179 0 0.201 0.015 0.399 0.043 0.592-0.351-0.063-0.711-0.098-1.080-0.098-3.344-0-6.054 2.712-6.054 6.058s2.71 6.058 6.054 6.058l20.508-0c3.004-0.006 5.438-2.444 5.438-5.451z"></path>
-        </svg>
-        Resume
-      </a>
+      <!--<a href="https://static.northwalker.site/resume/De-Yi+Huang+Resume.pdf" target="_blank" class="nw-btn">-->
+      <!--<i class="fa fa-cloud-download" aria-hidden="true"></i>-->
+      <!--Resume-->
+      <!--</a>-->
     </div>
   </div>
   <div id="le-dots">
@@ -89,12 +94,16 @@
 <section class="about" id="About">
   <div class="about-container">
     <div class="about-text-container">
-      <li class="about-text">3+ year experience in web application development from back-end to front-end.</li>
-      <li class="about-text">Familiar with various technical skills, website architecture/system design and implement.
-      </li>
-      <li class="about-text">Solid experience in web application development, API services, network communications.</li>
-      <li class="about-text">Strong problem solving and debugging skills.</li>
-      <li class="about-text">Interested in learning new web application skills and information technologies.</li>
+      <ul>
+        <li class="about-text">3+ year experience in web application development from back-end to front-end.</li>
+        <li class="about-text">Familiar with various technical skills, website architecture/system design and
+          implement.
+        </li>
+        <li class="about-text">Solid experience in web application development, API services, network communications.
+        </li>
+        <li class="about-text">Strong problem solving and debugging skills.</li>
+        <li class="about-text">Interested in learning new web application skills and information technologies.</li>
+      </ul>
     </div>
   </div>
 </section>
@@ -105,14 +114,14 @@
       <img
         src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAk1AAAAJDQwNzFiMWEzLTk1ZjMtNDk4Ny05YmZkLTBjNDc3ZmNjMTkyMw.jpg"
         alt="Northwalker"/>
-      <!--<img src="assets/images/thumbnail.jpg" alt="Northwalker"/>-->
+      <!--<img src="./src/img/thumbnail.jpg" alt="Northwalker"/>-->
     </div>
     <div id="card-username">
-      De-Yi Huang
+      Northwalker
     </div>
     <hr id="card-divider01"/>
     <div id="card-description01">
-      <div>Front-end and back-end developer</div>
+      <div>Front-end and back-end engineer</div>
       <div id="card-text01">
         <div class="card-text-color01 card-text-weight900">Technical Skills</div>
         <span class="card-text-color01">Programming Languages:</span> Node.js, Javascript, HTML/CSS, PHP, JAVA, Shell
@@ -139,9 +148,7 @@
 <section class="experience" id="Experience">
   <!-- Work Experience-->
 
-
   <!-- Project Experience-->
-
 
 </section>
 
@@ -182,58 +189,40 @@
     <div class="nw-footer-content">
       <div>
         <a class="nw-footer-icon" href="https://github.com/northwalker" target="_blank">
-          <svg id="icon-github" width="32" height="32" viewBox="0 0 32 32">
-            <path
-              d="M16 0.395c-8.836 0-16 7.163-16 16 0 7.069 4.585 13.067 10.942 15.182 0.8 0.148 1.094-0.347 1.094-0.77 0-0.381-0.015-1.642-0.022-2.979-4.452 0.968-5.391-1.888-5.391-1.888-0.728-1.849-1.776-2.341-1.776-2.341-1.452-0.993 0.11-0.973 0.11-0.973 1.606 0.113 2.452 1.649 2.452 1.649 1.427 2.446 3.743 1.739 4.656 1.33 0.143-1.034 0.558-1.74 1.016-2.14-3.554-0.404-7.29-1.777-7.29-7.907 0-1.747 0.625-3.174 1.649-4.295-0.166-0.403-0.714-2.030 0.155-4.234 0 0 1.344-0.43 4.401 1.64 1.276-0.355 2.645-0.532 4.005-0.539 1.359 0.006 2.729 0.184 4.008 0.539 3.054-2.070 4.395-1.64 4.395-1.64 0.871 2.204 0.323 3.831 0.157 4.234 1.026 1.12 1.647 2.548 1.647 4.295 0 6.145-3.743 7.498-7.306 7.895 0.574 0.497 1.085 1.47 1.085 2.963 0 2.141-0.019 3.864-0.019 4.391 0 0.426 0.288 0.925 1.099 0.768 6.354-2.118 10.933-8.113 10.933-15.18 0-8.837-7.164-16-16-16z"></path>
-          </svg>
+          <i class="fa fa-2x fa-github" aria-hidden="true"></i>
         </a>
         <a class="nw-footer-icon" href="mailto:northwalker28@gmail.com?subject=Hello Deyi!">
-          <svg id="icon-envelope" width="32" height="32" viewBox="0 0 32 32">
-            <path
-              d="M32 12.679v14.179q0 1.179-0.839 2.018t-2.018 0.839h-26.286q-1.179 0-2.018-0.839t-0.839-2.018v-14.179q0.786 0.875 1.804 1.554 6.464 4.393 8.875 6.161 1.018 0.75 1.652 1.17t1.688 0.857 1.964 0.438h0.036q0.911 0 1.964-0.438t1.688-0.857 1.652-1.17q3.036-2.196 8.893-6.161 1.018-0.696 1.786-1.554zM32 7.429q0 1.411-0.875 2.696t-2.179 2.196q-6.714 4.661-8.357 5.804-0.179 0.125-0.759 0.545t-0.964 0.679-0.929 0.58-1.027 0.482-0.893 0.161h-0.036q-0.411 0-0.893-0.161t-1.027-0.482-0.929-0.58-0.964-0.679-0.759-0.545q-1.625-1.143-4.679-3.259t-3.661-2.545q-1.107-0.75-2.089-2.063t-0.982-2.438q0-1.393 0.741-2.321t2.116-0.929h26.286q1.161 0 2.009 0.839t0.848 2.018z"></path>
-          </svg>
+          <i class="fa fa-2x fa-envelope-o" aria-hidden="true"></i>
+        </a>
+        <a class="nw-footer-icon" href="https://codepen.io/northwalker" target="_blank">
+          <i class="fa fa-2x fa-codepen" aria-hidden="true"></i>
+        </a>
+        <a class="nw-footer-icon" href="https://www.northwalker.site/onlineTool/index.html" target="_blank">
+          <i class="fa fa-2x fa-rocket" aria-hidden="true"></i>
+        </a>
+        <a class="nw-footer-icon" href="https://www.northwalker.site/taiwanInformation/weather/weather.html"
+           target="_blank">
+          <!-- https://www.northwalker.site/taiwanInformation/index.html-->
+          <i class="fa fa-2x fa-cloud" aria-hidden="true"></i>
         </a>
         <!--<a class="nw-footer-icon" href="https://stackoverflow.com/users/6584749/northwalker" target="_blank">-->
-        <!--<svg id="icon-stackoverflow" width="32" height="32" viewBox="0 0 32 32">-->
-        <!--<path-->
-        <!--d="M32 20v12h-32v-12h4v8h24v-8zM6 22h20v4h-20zM6.473 17.671l0.866-3.905 19.526 4.328-0.866 3.905zM8.739 9.642l1.69-3.625 18.126 8.452-1.69 3.625zM30.991 11.296l-2.435 3.173-15.867-12.175 1.761-2.294h1.82z"></path>-->
-        <!--</svg>-->
+        <!--<i class="fa fa-2x fa-stack-overflow" aria-hidden="true"></i>-->
         <!--</a>-->
-        <a class="nw-footer-icon" href="https://codepen.io/northwalker" target="_blank">
-          <svg id="icon-codePen" width="32" height="32" viewBox="0 0 32 32">
-            <path
-              d="M29.555 11.501l-14-9.333c-0.336-0.224-0.774-0.224-1.109 0l-14 9.333c-0.278 0.185-0.445 0.498-0.445 0.832v9.333c0 0.334 0.167 0.647 0.445 0.832l14 9.333c0.168 0.112 0.361 0.168 0.555 0.168s0.387-0.056 0.555-0.168l14-9.333c0.278-0.185 0.445-0.498 0.445-0.832v-9.333c0-0.334-0.167-0.647-0.445-0.832zM15 20.465l-5.197-3.465 5.197-3.465 5.197 3.465-5.197 3.465zM16 11.798v-6.93l11.197 7.465-5.197 3.465-6-4zM14 11.798l-6 4-5.197-3.465 11.197-7.465v6.93zM6.197 17l-4.197 2.798v-5.596l4.197 2.798zM8 18.202l6 4v6.93l-11.197-7.465 5.197-3.465zM16 22.202l6-4 5.197 3.465-11.197 7.465v-6.93zM23.803 17l4.197-2.798v5.596l-4.197-2.798z"></path>
-          </svg>
-        </a>
         <!--<a class="nw-footer-icon" href="https://jsfiddle.net/user/Northwalker" target="_blank">-->
-        <!--<svg id="icon-jsFiddle" width="37" height="32" viewBox="0 0 37 32">-->
-        <!--<path-->
-        <!--d="M32.143 13.786q1.982 0.821 3.205 2.598t1.223 3.955q0 2.929-2.107 5.009t-5.089 2.080q-0.071 0-0.205-0.009t-0.188-0.009h-21.732q-3.036-0.179-5.143-2.241t-2.107-5.009q0-1.964 0.982-3.625t2.625-2.625q-0.214-0.696-0.214-1.464 0-2.054 1.464-3.5t3.554-1.446q1.696 0 3.071 1.036 1.339-2.75 3.973-4.429t5.83-1.679q2.964 0 5.464 1.438t3.955 3.902 1.455 5.375q0 0.107-0.009 0.321t-0.009 0.321zM8.357 18.536q0 2.179 1.5 3.446t3.714 1.268q2.446 0 4.286-1.768-0.286-0.357-0.848-1.009t-0.777-0.902q-1.196 1.161-2.571 1.161-0.982 0-1.67-0.598t-0.688-1.563q0-0.946 0.688-1.554t1.634-0.607q0.786 0 1.509 0.375t1.304 0.982 1.161 1.339 1.232 1.464 1.375 1.339 1.732 0.982 2.17 0.375q2.161 0 3.652-1.277t1.491-3.402q0-2.161-1.5-3.429t-3.696-1.268q-2.554 0-4.304 1.732 0.25 0.286 0.527 0.607t0.616 0.714 0.518 0.607q1.179-1.143 2.536-1.143 0.929 0 1.643 0.589t0.714 1.5q0 1.018-0.661 1.634t-1.679 0.616q-0.768 0-1.473-0.375t-1.286-0.982-1.17-1.339-1.241-1.464-1.384-1.339-1.723-0.982-2.116-0.375q-2.179 0-3.696 1.259t-1.518 3.384z"></path>-->
-        <!--</svg>-->
+        <!--<i class="fa fa-2x fa-jsfiddle" aria-hidden="true"></i>-->
         <!--</a>-->
         <!--<a class="nw-footer-icon" href="https://twitter.com/northwalker28" target="_blank">-->
-        <!--<svg id="icon-twitter" width="32" height="32" viewBox="0 0 32 32">-->
-        <!--<path-->
-        <!--d="M32 7.075c-1.175 0.525-2.444 0.875-3.769 1.031 1.356-0.813 2.394-2.1 2.887-3.631-1.269 0.75-2.675 1.3-4.169 1.594-1.2-1.275-2.906-2.069-4.794-2.069-3.625 0-6.563 2.938-6.563 6.563 0 0.512 0.056 1.012 0.169 1.494-5.456-0.275-10.294-2.888-13.531-6.862-0.563 0.969-0.887 2.1-0.887 3.3 0 2.275 1.156 4.287 2.919 5.463-1.075-0.031-2.087-0.331-2.975-0.819 0 0.025 0 0.056 0 0.081 0 3.181 2.263 5.838 5.269 6.437-0.55 0.15-1.131 0.231-1.731 0.231-0.425 0-0.831-0.044-1.237-0.119 0.838 2.606 3.263 4.506 6.131 4.563-2.25 1.762-5.075 2.813-8.156 2.813-0.531 0-1.050-0.031-1.569-0.094 2.913 1.869 6.362 2.95 10.069 2.95 12.075 0 18.681-10.006 18.681-18.681 0-0.287-0.006-0.569-0.019-0.85 1.281-0.919 2.394-2.075 3.275-3.394z"></path>-->
-        <!--</svg>-->
+        <!--<i class="fa fa-2x fa-twitter" aria-hidden="true"></i>-->
         <!--</a>-->
         <a class="nw-footer-icon" href="https://www.northwalker.site" target="_blank">
-          <svg id="icon-home" width="32" height="32" viewBox="0 0 32 32">
-            <path
-              d="M25.143 17.714v8.571q0 0.464-0.339 0.804t-0.804 0.339h-6.857v-6.857h-4.571v6.857h-6.857q-0.464 0-0.804-0.339t-0.339-0.804v-8.571q0-0.018 0.009-0.054t0.009-0.054l10.268-8.464 10.268 8.464q0.018 0.036 0.018 0.107zM29.125 16.482l-1.107 1.321q-0.143 0.161-0.375 0.196h-0.054q-0.232 0-0.375-0.125l-12.357-10.304-12.357 10.304q-0.214 0.143-0.429 0.125-0.232-0.036-0.375-0.196l-1.107-1.321q-0.143-0.179-0.125-0.42t0.196-0.384l12.839-10.696q0.571-0.464 1.357-0.464t1.357 0.464l4.357 3.643v-3.482q0-0.25 0.161-0.411t0.411-0.161h3.429q0.25 0 0.411 0.161t0.161 0.411v7.286l3.911 3.25q0.179 0.143 0.196 0.384t-0.125 0.42z"></path>
-          </svg>
+          <i class="fa fa-2x fa-home" aria-hidden="true"></i>
         </a>
         <a class="nw-footer-icon" href="https://tw.linkedin.com/in/de-yi-huang" target="_blank">
-          <svg id="icon-linedin" width="32" height="32" viewBox="0 0 32 32">
-            <path
-              d="M12 12h5.535v2.837h0.079c0.77-1.381 2.655-2.837 5.464-2.837 5.842 0 6.922 3.637 6.922 8.367v9.633h-5.769v-8.54c0-2.037-0.042-4.657-3.001-4.657-3.005 0-3.463 2.218-3.463 4.509v8.688h-5.767v-18z"></path>
-            <path d="M2 12h6v18h-6v-18z"></path>
-            <path d="M8 7c0 1.657-1.343 3-3 3s-3-1.343-3-3c0-1.657 1.343-3 3-3s3 1.343 3 3z"></path>
-          </svg>
+          <i class="fa fa-2x fa-linkedin" aria-hidden="true"></i>
         </a>
       </div>
       <div class="copy-right">
-        &copy 2016 Northwalker. All Rights Reserved.
+        &copy 2016-2017 Northwalker. All Rights Reserved. <span id='version'></span>
       </div>
     </div>
   </div>
@@ -242,13 +231,15 @@
 <!-- Google Map API -->
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCaRpcxDaf1NmM2qHplTgJR_0rKioMYygI"></script>
 
+
+<!-- build:js -->
 <!-- jQuery -->
-<script src="assets/js/jquery.min.js"></script>
+<script src="./src/js/jquery.min.js"></script>
 <!-- particles.js lib - https://github.com/VincentGarreau/particles.js -->
 <!--<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>-->
-<script src="assets/js/particles.min.js"></script>
-
-<script src="assets/js/main.js"></script>
+<script src="./src/js/particles.min.js"></script>
+<script src="./src/js/main.js"></script>
+<!-- endbuild -->
 
 
 <script>
@@ -264,7 +255,7 @@
     m.parentNode.insertBefore(a, m)
   })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
 
-  ga('create', 'UA-80918866-2', 'auto');
+  ga('create', 'UA-80918866-1', 'auto');
   ga('send', 'pageview');
 
 </script>
