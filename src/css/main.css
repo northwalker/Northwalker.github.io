@@ -38,11 +38,17 @@ canvas {
   /*background-color: #000017;*/
   /*background-color: #000000;*/
   /*background: url('https://static.northwalker.site/background/ST-sky-lantern.jpg') no-repeat center center fixed;*/
-  background: url('https://static.northwalker.site/background/NewYork-2016-1.jpg') no-repeat center center fixed;
-
-  background-repeat: no-repeat;
+  /*background:url(https://static.northwalker.site/background/NewYork201610.jpg);*/
+  background-image: url(https://static.northwalker.site/background/NewYork-2016-1.jpg);
   background-size: cover;
   background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+@media (min-width: 768px) {
+	#particles-js {
+		/*Mobile broswer disable attachment: fixed;*/
+		background-attachment: fixed; 
+	}
 }
 
 /* ----- nw-navigation ----- */
@@ -500,7 +506,7 @@ canvas {
 
 @media (max-width: 400px) {
   .about-container {
-    padding-top: 250px;
+    padding-top: 50px;
     padding-left: 15px;
     padding-right: 15px;
     -webkit-transition: all .3s ease;
@@ -634,13 +640,19 @@ canvas {
   width: 100%;
   height: 300px;
   background-image: url('https://static.northwalker.site/background/ST-sky-lantern.jpg');
-
-  /* Create the parallax scrolling effect */
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
+  
   background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
 }
+
+@media (min-width: 768px) {
+	.contact {
+		/*Mobile broswer disable attachment: fixed;*/
+		background-attachment: fixed; 
+	}
+}
+
 
 .contact-container {
 
@@ -791,6 +803,12 @@ canvas {
 
 .nw-footer .copy-right {
   margin: 20px;
+}
+
+@media (max-width: 400px) {
+	.nw-footer .nw-footer-content .hide-when-xs {
+		display: none; /* TEMP for RWD */
+	}
 }
 
 /* ============================================================ */
