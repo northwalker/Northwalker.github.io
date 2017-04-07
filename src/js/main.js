@@ -27,11 +27,6 @@
     else
       $('.nw-navigation').removeClass('nw-navbar-shadow-2x');
 
-    if ($window.scrollTop() > 400) {
-      $('#card-container').css('visibility', 'visible');
-      $('#card-container').addClass('animated fadeInUp');
-    }
-
     if ($window.scrollTop() > 1500) {
       $('.contact-container').css('visibility', 'visible');
       $('.contact-container').addClass('animated flipInX');
@@ -84,10 +79,17 @@
     return false;
   });
 
+  $('.goToSkill').on('click', function () {
+
+    $('html, body').animate({
+      scrollTop: $('#Skill').offset().top
+    }, 600);
+    return false;
+  });
   $('.goToContact').on('click', function () {
 
     $('html, body').animate({
-      scrollTop: $('#Contact').offset().top
+      scrollTop: ( $('#Contact').offset().top - 400 )
     }, 600);
     return false;
   });
@@ -110,7 +112,7 @@
 
   function initMap() {
     var myLatLng = {lat: 25.023739, lng: 121.553004};
-    var map = new google.maps.Map(document.getElementById('map'), {
+    var map = new google.maps.Map(document.getElementById('Map'), {
       zoom: 13,
       center: myLatLng,
       draggable: false,
@@ -139,7 +141,6 @@
   initSkillBar();
 
   function init() {
-    $('#card-container').css('visibility', 'hidden');
     $('.contact-container').css('visibility', 'hidden');
 
     var version = $('meta[name=version]').attr('content');

@@ -35,19 +35,21 @@ canvas {
   position: absolute;
   width: 100%;
   height: 780px;
-  /*background-color: #000017;*/
-  /*background-color: #000000;*/
+  background-color: #000000;  /* Default color */
   /*background: url('https://static.northwalker.site/background/ST-sky-lantern.jpg') no-repeat center center fixed;*/
   /*background:url(https://static.northwalker.site/background/NewYork201610.jpg);*/
   background-image: url(https://static.northwalker.site/background/NewYork-2016-1.jpg);
   background-size: cover;
   background-position: 50% 50%;
   background-repeat: no-repeat;
+
+
 }
+
 @media (min-width: 768px) {
 	#particles-js {
 		/*Mobile broswer disable attachment: fixed;*/
-		background-attachment: fixed; 
+		background-attachment: fixed;
 	}
 }
 
@@ -184,6 +186,9 @@ canvas {
   background: #4994f2;
 }
 
+.nw-navigation-list ul li span {
+  /*padding: 35px 15px;*/
+}
 .nw-navigation-list ul li a {
   height: 90px;
 
@@ -192,7 +197,7 @@ canvas {
   text-align: center;
   text-decoration: none;
   color: #FFFFFF;
-  padding: 35px 15px;
+  /*padding: 35px 15px;*/
 
   -webkit-transition: color .3s ease;
   -moz-transition: color .3s ease;
@@ -455,28 +460,26 @@ canvas {
 }
 
 .about-container {
-  padding-top: 450px;
+  font-size: 20px;
+
+  padding-top: 400px;
   padding-left: 150px;
   padding-right: 150px;
-}
 
-.about-text-container {
-  font-size: 20px;
-  margin-top: 50px;
   color: white;
-
-  border-radius: 8px;
-  padding: 5px;
-  background-color: rgba(0, 0, 0, 0.5);
 }
 
-.about-text {
-  margin: 5px;
+@media (min-width: 1440px) {
+  .about-container {
+    padding-top: 300px;
+    font-size: 24px;
+  }
 }
 
 @media (max-width: 1200px) {
   .about-container {
-    padding-top: 450px;
+    font-size: 20px;
+    padding-top: 400px;
     padding-left: 50px;
     padding-right: 50px;
   }
@@ -484,6 +487,7 @@ canvas {
 
 @media (max-width: 900px) {
   .about-container {
+    font-size: 20px;
     padding-top: 400px;
     padding-left: 50px;
     padding-right: 50px;
@@ -492,10 +496,10 @@ canvas {
 
 @media (max-width: 768px) {
   .about-container {
+    font-size: 20px;
     padding-top: 300px;
     padding-left: 15px;
     padding-right: 15px;
-
     -webkit-transition: all .3s ease;
     -moz-transition: all .3s ease;
     -ms-transition: all .3s ease;
@@ -506,6 +510,7 @@ canvas {
 
 @media (max-width: 400px) {
   .about-container {
+    font-size: 20px;
     padding-top: 50px;
     padding-left: 15px;
     padding-right: 15px;
@@ -517,105 +522,103 @@ canvas {
   }
 }
 
-/* ----- section-card ----- */
-
-.card {
-  width: 100%;
-  /*height: 780px;*/
-  min-height: 780px; /* RWD*/
-  text-align: left;
-
-  /*style-1*/
-  /*background-color: #49BEF2;*/
-  /*style-2*/
-  background-image: -webkit-linear-gradient(135deg, #5BB359 0%, #49BEF2 65%);
-  background-image: -o-linear-gradient(135deg, #5BB359 0%, #49BEF2 65%);
-  background-image: -moz-linear-gradient(135deg, #5BB359 0%, #49BEF2 65%);
-  background-image: -ms-linear-gradient(135deg, #5BB359 0%, #49BEF2 65%);
-  background-image: linear-gradient(135deg, #5BB359 0%, #49BEF2 65%);
-  /*style-3*/
-  /*background-image: linear-gradient(45deg, #4361c2, #4fa49a 50%, #9dc66b 95%);*/
-  /*style-4*/
-  /*background-image: url('https://static.northwalker.site/background/greenCoverTaiChung.jpg');*/
-  /*background-repeat: no-repeat;*/
-  /*background-size: cover;*/
-  /*background-position: 50% 50%;*/
-
-  /*background-color: #bad0b8;*/
-  /*background-image: -webkit-linear-gradient(right, #FC7864, #FDA366);*/
-  /*background-image: -moz-linear-gradient(right, #FC7864, #FDA366);*/
-  /*background-image: -o-linear-gradient(right, #FC7864, #FDA366);*/
-  /*background-image: -ms-linear-gradient(right, #FC7864, #FDA366);*/
-  /*background-image: linear-gradient(right, #FC7864, #FDA366);*/
-
+.about-text-container {
+  margin-top: 50px;
+  border-radius: 8px;
+  padding: 5px;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
-#card-container {
-  padding: 120px 150px;
+.about-text {
+  margin: 5px;
+}
+
+/* ----- section-skill ----- */
+
+.skill{
+  background-color: #FFFFFF;
+}
+
+.skill-card-container {
+  /*border: 1px solid lightblue;*/
+
+  /*padding-top: 75px;*/
+  /*padding-bottom: 25px;*/
+
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.skill-card {
+  width: 30%;
+  margin: 15px;
+  /*padding: 15px;*/
+
+  border: 2px solid limegreen;  /* 影響 flex */
+  border-radius: 7px;
+
+  /*display: flex;*/             /* icon 與 content 並排 */
+  /*-webkit-justify-content: center;*/
+  /*justify-content: center;*/
+}
+
+@media (min-width: 1440px) {
+  .skill-card {
+    /*width: 24%;*/
+    /*margin: 5px;*/
+  }
 }
 
 @media (max-width: 1200px) {
-  #card-container {
-    padding: 100px 50px;
+  .skill-card {
+    width: 45%;
   }
 }
 
 @media (max-width: 900px) {
-  #card-container {
-    padding: 100px 50px;
+  .skill-card {
+    /*width: 45%;*/
   }
 }
 
 @media (max-width: 768px) {
-  #card-container {
-    padding: 100px 15px;
+  .skill-card {
+    width: 100%;
+    /*min-width: 300px;*/
   }
 }
 
-#card-image01 img {
-  width: 150px;
-  border-radius: 100%;
+.skill-card-icon {
+  margin: 10px;
+  color: limegreen;
+  text-align: center;
 }
 
-#card-username {
-  font-size: 44px;
-  color: white;
-  margin-top: 20px;
-}
-
-#card-divider01 {
-  display: block;
-  width: 250px;
-  height: 1px;
-  margin: 10px 0px;
-  background: #FFFFFF;
-  background-color: rgba(255, 255, 255, 0.4);
-}
-
-#card-description01 {
-  color: #FFFFFF;
-  font-size: 24px;
-  margin-top: 20px;
-}
-
-#card-text01 {
+.skill-card-content-title {
   font-size: 20px;
-  margin-top: 50px;
-  color: white;
-
-  /*border-radius: 8px;*/
-  /*padding: 15px;*/
-  /*background-color: rgba(0,0,0,0.5);*/
-
+  font-weight: bold;
+  text-align: center;
 }
 
-.card-text-color01 {
-  /*color: lightblue;*/
-  color: #4000FF;
+.skill-card-content-list {
+  color: limegreen;  /* for li bullet */
+  font-size: 18px;
+  margin-top: 20px;
+
+  /* over write ul */
 }
 
-.card-text-weight900 {
-  font-weight: 900;
+.skill-card-content-list span{
+  color: black;     /* for li text */
+}
+
+.skill-card-content-list .second-list {
+  font-size: 16px;
+  color: black;
 }
 
 /* ----- section-education ----- */
@@ -640,7 +643,7 @@ canvas {
   width: 100%;
   height: 300px;
   background-image: url('https://static.northwalker.site/background/ST-sky-lantern.jpg');
-  
+
   background-size: cover;
   background-position: top;
   background-repeat: no-repeat;
@@ -649,10 +652,9 @@ canvas {
 @media (min-width: 768px) {
 	.contact {
 		/*Mobile broswer disable attachment: fixed;*/
-		background-attachment: fixed; 
+		background-attachment: fixed;
 	}
 }
-
 
 .contact-container {
 
@@ -690,12 +692,12 @@ canvas {
 }
 
 .contact-info-text {
-  font-size: 28px;
+  font-size: 24px;
 }
 
 .contact-info-icon {
   margin: auto 10px;
-  font-size: 28px;
+  font-size: 24px;
 }
 
 /* ----- section-additional ----- */
