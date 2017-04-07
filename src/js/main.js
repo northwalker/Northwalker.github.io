@@ -36,31 +36,6 @@
 
   });
 
-  $(window).resize(function () {
-    if ($window.width() > 768) {
-      $('#navigation-btn').hide();
-      $('.nw-navigation-list').show();
-    }
-    if ($window.width() < 768) {
-      $('#navigation-btn').show();
-      $('.nw-navigation-list').hide();
-    }
-  });
-
-  $('#navigation-btn').on('click', function () {
-    // $('#nw-navigation-list').show();
-    if ($('.nw-navigation-list').css('display') == 'none') {
-      $('.nw-navigation-list').show(300, function () {
-        //
-      });
-    }
-    else {
-      $('.nw-navigation-list').hide(300, function () {
-        //
-      });
-    }
-  });
-
   $('.goToHome').on('click', function () {
     // $body.animate({
     //   scrollTop: 0
@@ -71,14 +46,12 @@
 
     return false;
   });
-
   $('.goToAbout').on('click', function () {
     $('html, body').animate({
       scrollTop: $('#About').offset().top
     }, 600);
     return false;
   });
-
   $('.goToSkill').on('click', function () {
 
     $('html, body').animate({
@@ -96,19 +69,31 @@
 
   function initNavigation() {
 
-    if ($window.width() < 768) {
+    if ($window.width() <= 768) {
       $('.nw-navigation-list').hide();
-      $('#navigation-btn').show();
+      $('.nw-navigation-brand-list').show();
 
       $('.nw-navigation').addClass('nw-navbar-shadow-2x');
     }
     else {
-      $('#navigation-btn').hide();
+      $('.nw-navigation-brand-list').hide();
       $('.nw-navigation-list').show();
     }
   }
 
   initNavigation();
+
+
+  $(window).resize(function () {
+    if ($window.width() <= 768) {
+      $('.nw-navigation-brand-list').show();
+      $('.nw-navigation-list').hide();
+    }
+    if ($window.width() > 768) {
+      $('.nw-navigation-brand-list').hide();
+      $('.nw-navigation-list').show();
+    }
+  });
 
   function initMap() {
     var myLatLng = {lat: 25.023739, lng: 121.553004};
@@ -126,19 +111,16 @@
       map: map,
       title: 'Hello, Northwalker!'
     });
-  }
 
-  initMap();
-
-  function initSkillBar() {
-    $('.skillbar').each(function () {
-      $(this).find('.skillbar-bar').animate({
-        width: $(this).attr('data-percent')
-      }, 5000);
+    // Add resize reload event
+    google.maps.event.addDomListener(window, 'resize', function() {
+      // var center = map.getCenter();
+      // console.log('center', center);
+      map.setCenter(myLatLng);
     });
   }
 
-  initSkillBar();
+  initMap();
 
   function init() {
     $('.contact-container').css('visibility', 'hidden');

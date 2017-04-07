@@ -75,12 +75,6 @@ canvas {
   color: #FFFFFF;
   font-size: 44px;
 
-  /*-webkit-transition: color .3s ease;*/
-  /*-moz-transition: color .3s ease;*/
-  /*-ms-transition: color .3s ease;*/
-  /*-o-transition: color .3s ease;*/
-  /*transition: color .3s ease;*/
-
   /* div 垂直置中  */
   display: -webkit-flex;
   display: flex;
@@ -102,28 +96,47 @@ canvas {
 }
 
 .nw-navigation-brand .nw-navigation-brand-title {
-
-  cursor: pointer;
   color: white;
+  cursor: pointer;
   text-decoration: none;
+}
+
+.nw-navigation-brand .nw-navigation-brand-list {
+  /* default */
+  /*display: none;*/
 
 }
 
-.nw-navigation-brand #navigation-btn {
-  /* default */
-  display: none;
+.nw-navigation-brand-list{
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 60px;
 
+  display: -webkit-flex;
+  display: flex ;
+
+  -webkit-flex-direction: row;
+  flex-direction: row;
+
+  /* 兩端使用 padding right left 控制較優 */
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+
+}
+
+.nw-navigation-brand-list-item{
   cursor: pointer;
 }
 
-.nw-navigation-brand .nw-navigation-brand-btn {
-  padding: 5px;
-  color: #ffffff;
-  border: 1px solid #FFFFFF;
-  border-radius: 5px;
-  text-decoration: none;
-  background: transparent;
-  font-size: 30px;
+.nw-navigation-brand-list-item:hover{
+  cursor: pointer;
+  color: #4994f2;
+
+  -webkit-transition: color .3s ease;
+  -moz-transition: color .3s ease;
+  -ms-transition: color .3s ease;
+  -o-transition: color .3s ease;
+  transition: color .3s ease;
 }
 
 .nw-navigation-list {
@@ -142,30 +155,19 @@ canvas {
   -webkit-justify-content: flex-end;
   justify-content: flex-end;
 
-  /*-webkit-margin-before: auto; !* margin-top:auto *!*/
-  /*-webkit-margin-after: auto; !* margin-bottom: auto *!*/
-  /*-webkit-margin-start: auto; !* margin-left: auto *!*/
-  /*margin-inline-start: auto; !* for Firefox *!*/
+  margin-right: 75px; /* 可能需要依據 menu list item數量做 RWD 修改*/
 
-  /*-webkit-margin-end: 100px; !* margin-right: 100px *!*/
-  /*margin-inline-end: 100px; !* for Firefox *!*/
-  margin-right: 100px; /* for unsupported -webkit-margin-end browser */
-
-}
-
-.nw-navigation-list > ul {
-  /*border: 1px solid green;*/
 }
 
 .nw-navigation-list ul li {
 
   display: inline-block;
-  position: relative; /* dropdown position*/
+  position: relative;
 
   /*cursor: pointer;*/
   background-color: transparent;
-
-  padding-left: 15px;
+  padding-left: 10px;
+  padding-right: 10px;
 
 }
 
@@ -187,18 +189,17 @@ canvas {
 }
 
 .nw-navigation-list ul li span {
-  /*padding: 35px 15px;*/
+  /* 增加這一層控制底線長度 */
+
 }
+
 .nw-navigation-list ul li a {
   height: 90px;
 
   cursor: pointer;
   font-size: 20px;
-  text-align: center;
   text-decoration: none;
   color: #FFFFFF;
-  /*padding: 35px 15px;*/
-
   -webkit-transition: color .3s ease;
   -moz-transition: color .3s ease;
   -ms-transition: color .3s ease;
@@ -211,18 +212,56 @@ canvas {
   color: #4994f2;
 }
 
+.nw-navigation-list ul li a .linkText{
+  padding-left: 10px;
+  vertical-align: bottom;
+
+}
+
+@media (min-width: 1400px) {
+
+  .nw-navigation-list{
+    margin-right: 150px;
+  }
+  .nw-navigation-list ul li {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+}
+
+@media (max-width: 1440px) {
+
+  .nw-navigation-list{
+    margin-right: 100px;
+  }
+  .nw-navigation-list ul {
+    padding-left: 10px; /*overwrite ul default*/
+  }
+  .nw-navigation-list ul li {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+}
+
 @media (max-width: 1024px) {
   .nw-navigation-brand {
     height: 90px;
     margin-left: 60px;
+    font-size: 36px;
   }
 
   .nw-navigation-list {
-    margin-right: 15px;
+    margin-right: 50px;
   }
 
   .nw-navigation-list ul {
-    padding-left: 0px; /*overwrite*/
+    padding-left: 0px; /*overwrite ul default*/
+  }
+  .nw-navigation-list ul li {
+    padding-left: 5px;
+    padding-right: 5px;
   }
 }
 
@@ -230,25 +269,15 @@ canvas {
 
   .nw-navigation {
     /*display: flex;*/
-    -webkit-flex-direction: column;
+    -webkit-flex-direction: column; /* 如果需顯示 nw-navigation-list */
     flex-direction: column;
   }
 
   .nw-navigation-brand {
-
     height: 90px;
     margin-left: 15px;
     margin-right: 15px;
-  }
-
-  .nw-navigation-brand #navigation-btn:hover {
-    color: #4994f2;
-    border-color: #4994f2;
-    -webkit-transition: all .3s ease;
-    -moz-transition: all .3s ease;
-    -ms-transition: all .3s ease;
-    -o-transition: all .3s ease;
-    transition: all .3s ease;
+    font-size: 36px;
   }
 
   .nw-navigation-list {
@@ -284,64 +313,17 @@ canvas {
 
 }
 
-.nw-navigation-list ul li ul {
-  text-align: left;
-  padding: 0;
-  position: absolute;
-  top: 48px;
-  left: 0;
-  width: 200px;
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  box-shadow: none;
-
-  /* 利用 visibility & opacity 隱藏下拉式選單 */
-  /* 不使用 display: none; 會影響到 transition 效果 */
-  /*display: none;*/
-  visibility: hidden;
-  opacity: 0;
-
-  /* transition 只能使用 opacity, all 會影響hover到其他物件 */
-  /* TODO Safari 無transition 效果 */
-  -webkit-transition: opacity 1s ease-in;
-  -moz-transition: opacity 1s ease-in;
-  -ms-transition: opacity 1s ease-in;
-  -o-transition: opacity 1s ease-in;
-  transition: opacity 1s ease-in;
-}
-
-.nw-navigation-list ul li:hover ul {
-  /* 利用 visibility & opacity 開啟下拉式選單 */
-  display: block;
-  opacity: 1;
-  visibility: visible;
-}
-
-.nw-navigation-list ul li ul li {
-  display: block;
-  color: #FFFFFF;
-  background-color: rgba(0, 0, 0, 0.9); /* TODO 會被opacity 覆蓋 */
-  text-shadow: 0 -1px 0 #000;
-
-  padding: 15px;
-}
-
-.nw-navigation-list ul li ul li:hover {
-  cursor: pointer;
-  color: #4994f2;
-  background-color: #666666;
-}
-
 .nw-navbar-shadow {
   background-color: rgba(0, 0, 0, 0.6);
   /*opacity: 0.7;*/
   /*background-color: #000000;*/
   /* It's will apply opacity to child element, or use background-color: rgba(0,0,0,0.7) instead. */
-  transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
-  -ms-transition: all 0.3s ease-in-out;
-  -moz-transition: all 0.3s ease-in-out;
-  -webkit-transition: all 0.3s ease-in-out;
+  -webkit-transition: all .3s ease-in-out;
+  -moz-transition: all .3s ease-in-out;
+  -ms-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+
 
   /* Adds shadow to the bottom of the bar */
   -webkit-box-shadow: 0px 0px 8px 0px #000000;
@@ -353,9 +335,11 @@ canvas {
 .nw-navbar-shadow-2x {
 
   background-color: rgba(0, 0, 0, 0.9);
-  transition: all 0.3s ease-in-out;
-  moz-transition: all 0.3s ease-in-out;
-  webkit-transition: all 0.3s ease-in-out;
+  -webkit-transition: all .3s ease-in-out;
+  -moz-transition: all .3s ease-in-out;
+  -ms-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
 
   /* Adds shadow to the bottom of the bar */
   -webkit-box-shadow: 0px 0px 8px 0px #000000;
@@ -383,6 +367,8 @@ canvas {
   top: 400px;
   position: relative;
 
+  padding-left:  15px;
+  padding-right:  15px;
   font-size: 44px;
   /*font-weight: 300;*/
   z-index: 50;
@@ -393,10 +379,10 @@ canvas {
 
   top: 430px;
   position: relative;
-
+  padding-left:  15px;
+  padding-right:  15px;
   font-size: 28px;
   /*font-weight: 300;*/
-
   z-index: 50;
   text-shadow: 0 0 10px rgba(0, 0, 0, 0.75);
 }
@@ -476,6 +462,15 @@ canvas {
   }
 }
 
+@media (max-width: 1440px) {
+  .about-container {
+    font-size: 20px;
+    padding-top: 400px;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}
+
 @media (max-width: 1200px) {
   .about-container {
     font-size: 20px;
@@ -537,6 +532,8 @@ canvas {
 
 .skill{
   background-color: #FFFFFF;
+  padding-top: 50px; /* maybe for temp*/
+  padding-bottom: 50px;
 }
 
 .skill-card-container {
@@ -697,7 +694,7 @@ canvas {
 
 .contact-info-icon {
   margin: auto 10px;
-  font-size: 24px;
+  /*font-size: 24px;*/
 }
 
 /* ----- section-additional ----- */

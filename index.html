@@ -1,5 +1,6 @@
 <!DOCTYPE HTML>
 <html>
+
 <head>
   <title>Northwalker</title>
   <meta charset="utf-8"/>
@@ -30,51 +31,55 @@
 
   <div class="nw-navigation-brand">
     <a class="nw-navigation-brand-title fontTangerine" href="/">Northwalker</a>
-    <a class="nw-navigation-brand-btn" id="navigation-btn">
-      <i class="fa fa-bars" aria-hidden="true"></i>
-      <!-- if no font-awesome-->
-      <!--<i class="icon-vertical-align padding-bottom-5 material-icons">menu</i>-->
-    </a>
+
+    <span class="nw-navigation-brand-list">
+      <span class="nw-navigation-brand-list-item goToHome">
+        <i class="icon-vertical-align material-icons">home</i>
+      </span>
+      <span class="nw-navigation-brand-list-item goToAbout">
+        <i class="icon-vertical-align material-icons">person</i>
+      </span>
+      <span class="nw-navigation-brand-list-item goToSkill">
+        <i class="icon-vertical-align material-icons">extension</i>
+      </span>
+      <span class="nw-navigation-brand-list-item goToContact">
+        <i class="icon-vertical-align material-icons">send</i>
+      </span>
+    </span>
   </div>
   <div class="nw-navigation-list">
     <ul>
       <li>
         <span>
           <a href="#Home" class="goToHome">
-            <i class="icon-vertical-align padding-bottom-5 material-icons">home</i>
-            Home
+            <i class="icon-vertical-align material-icons">home</i>
+            <span class="linkText">Home</span>
           </a>
         </span>
       </li>
       <li>
-        <span>
-          <a href="#About" class="goToAbout">
-            <i class="icon-vertical-align padding-bottom-5 material-icons">person</i>
-            About
-          </a>
+        <span><a href="#About" class="goToAbout"><i class="icon-vertical-align material-icons">person</i>
+          <span class="linkText">About</span></a>
         </span>
       </li>
       <li>
+        <span><a href="#Skill" class="goToSkill"><i class="icon-vertical-align material-icons">extension</i>
+            <span class="linkText">Skill</span></a>
+        </span>
+      </li>
+      <li style="display: none;">
         <span>
-          <a href="#Skill" class="goToSkill">
-            <i class="icon-vertical-align padding-bottom-5 material-icons">extension</i>
-            Skill
+          <a href="#Timeline" class="goToTimeline">
+            <i class="icon-vertical-align material-icons">timeline</i>
+            <span>Exp.</span>
           </a>
         </span>
       </li>
-      <!--<li>-->
-        <!--<span>-->
-          <!--<a href="#Skill" class="goToSkill">-->
-            <!--<i class="icon-vertical-align padding-bottom-5 material-icons">timeline</i>-->
-            <!--Exp.-->
-          <!--</a>-->
-        <!--</span>-->
-      <!--</li>-->
       <li>
         <span>
           <a href="#Contact" class="goToContact">
-            <i class="icon-vertical-align padding-bottom-5 material-icons">send</i>
-            Contact
+            <i class="icon-vertical-align material-icons">send</i>
+            <span class="linkText">Contact</span>
           </a>
         </span>
       </li>
@@ -88,8 +93,7 @@
       <div class="title-1 fontArchivoBlack ">Hello! I'm Northwalker</div>
       <div class="title-2 fontLato">Front-end and Back-end Engineer</div>
       <a href="https://github.com/northwalker" class="nw-btn">
-        <i class="fa fa-github" aria-hidden="true"></i>
-        Github
+        <i class="fa fa-github" aria-hidden="true"></i> Github
       </a>
       <!--<a href="https://static.northwalker.site/resume/De-Yi+Huang+Resume.pdf" target="_blank" class="nw-btn">-->
       <!--<i class="fa fa-cloud-download" aria-hidden="true"></i>-->
@@ -106,8 +110,7 @@
     <div class="about-text-container">
       <ul>
         <li class="about-text">3+ year experience in web application development from back-end to front-end.</li>
-        <li class="about-text">Familiar with various technical skills, website architecture/system design and
-          implement.
+        <li class="about-text">Familiar with various technical skills, website architecture/system design and implement.
         </li>
         <li class="about-text">Solid experience in web application development, API services, network communications.
         </li>
@@ -118,7 +121,7 @@
   </div>
 </section>
 <section class="skill" id="Skill">
-  <div class="skill-title" style="text-align: center; height: 100px;">
+  <div class="skill-title">
 
   </div>
   <div class="skill-card-container">
@@ -148,7 +151,6 @@
         <div class="skill-card-content-title">Frameworks</div>
         <ul class="skill-card-content-list">
           <li><span>Angular.js</span></li>
-          </li>
           <li><span>Angular Materia</span></li>
           <li><span>Backbone.js</span></li>
           <li><span>Express.js</span></li>
@@ -174,6 +176,9 @@
               <li>Maps, Youtube, Translation, Analytics, etc.</li>
             </ul>
           </li>
+          <li><span>moment.js</span></li>
+          <li><span>underscore.js</span></li>
+
         </ul>
       </div>
     </div>
@@ -209,7 +214,7 @@
           <li><span>Github</span></li>
           <li><span>Windows</span></li>
           <li><span>Mac OS</span></li>
-          <li><span>Linux Ubuntu</span></span></li>
+          <li><span>Linux Ubuntu</span></li>
           <li><span>Apache2</span></li>
           <!-- <li>Tomcat7</span></li> -->
           <li><span>Nginx</span></li>
@@ -235,39 +240,6 @@
     </div>
   </div>
 </section>
-<section class="card-2">
-  <!--<div id="card-container">-->
-  <!--<div id="card-image01">-->
-  <!--&lt;!&ndash;<img src="https://avatars.githubusercontent.com/u/7236270" alt="Northwalker"/>&ndash;&gt;-->
-  <!--<img-->
-  <!--src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAk1AAAAJDQwNzFiMWEzLTk1ZjMtNDk4Ny05YmZkLTBjNDc3ZmNjMTkyMw.jpg"-->
-  <!--alt="Northwalker"/>-->
-  <!--&lt;!&ndash;<img src="./src/img/thumbnail.jpg" alt="Northwalker"/>&ndash;&gt;-->
-  <!--</div>-->
-  <!--<div id="card-username">-->
-  <!--Northwalker-->
-  <!--</div>-->
-  <!--<hr id="card-divider01"/>-->
-  <!--<div id="card-description01">-->
-  <!--<div>Front-end and back-end engineer</div>-->
-  <!--<div id="card-text01">-->
-  <!--<div class="card-text-color01 card-text-weight900">Technical Skills</div>-->
-  <!--<span class="card-text-color01">Programming Languages:</span> Node.js, Javascript, HTML/CSS, PHP, JAVA, Shell-->
-  <!--Script<br/>-->
-  <!--<span class="card-text-color01">Frameworks/Libraries:</span> jQuery, Angular.js, Angular Material, Bootstrap,-->
-  <!--Ionic, Highchart.js, chart.js, Backbone.js, Loopback.js, Express.js and Google JavaScript APIs.<br/>-->
-  <!--<span class="card-text-color01">Version Control and Continuous Integration:</span> Git (gitflow), SVN, Gulp and-->
-  <!--Jenkins. <br/>-->
-  <!--<span class="card-text-color01">Programming Editors/IDEs:</span> JetBrains WebStorm, Atom, Sublime Text 2,-->
-  <!--GitHub <br/>-->
-  <!--<span class="card-text-color01">Develop Environment:</span> Windows, MacOS X, Linux Ubuntu, Tomcat7, AWS,-->
-  <!--Apache2, Nginx <br/>-->
-  <!--<span class="card-text-color01">Experience:</span>AJAX, RESTful API, MySQL, MVC Framework, Material-Design,-->
-  <!--Responsive Web Design (RWD), Single Page Application (SPA), Web Server and Redis <br/>-->
-  <!--</div>-->
-  <!--</div>-->
-  <!--</div>-->
-</section>
 <section class="education" id="Education">
   <!-- Education -->
 </section>
@@ -288,7 +260,7 @@
     <a class="contact-info" href="mailto:northwalker28@gmail.com?subject=Hello Deyi!">
       <span class="contact-info-text">Contact me</span>
       <span class="contact-info-icon">
-        <i class="icon-vertical-align padding-bottom-5  material-icons" style="font-size: 36px;">email</i>
+          <i class="fa fa-2x fa-envelope-o" aria-hidden="true"></i>
       </span>
     </a>
   </div>
@@ -300,7 +272,7 @@
   <div class="additional-container">
     <div class="additional-info">
       <span class="additional-info-text">Additional Info.</span>
-      <span class="additional-info-icon">
+                <span class="additional-info-icon">
       </span>
     </div>
   </div>
