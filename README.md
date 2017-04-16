@@ -1,7 +1,7 @@
 # Northwalker.github.io
 
-Northwalker 
+This is a GitHub Pages repository of Northwalker. 
 
-Website: [https://northwalker.github.io/](https://northwalker.github.io/)
+GitHub Pages website URL: [https://northwalker.github.io/](https://northwalker.github.io/)
 
   
