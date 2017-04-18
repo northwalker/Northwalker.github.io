@@ -55,14 +55,14 @@
   $('.goToSkill').on('click', function () {
 
     $('html, body').animate({
-      scrollTop: $('#Skill').offset().top
+      scrollTop: $('#Skill').offset().top - 60
     }, 600);
     return false;
   });
   $('.goToContact').on('click', function () {
 
     $('html, body').animate({
-      scrollTop: ( $('#Contact').offset().top - 400 )
+      scrollTop: ( $('#Contact').offset().top - 420 )
     }, 600);
     return false;
   });
@@ -96,10 +96,12 @@
   });
 
   function initMap() {
-    var myLatLng = {lat: 25.023739, lng: 121.553004};
+    var myMapLatLng = {lat: 25.023739, lng: 121.553004};   // Liuzhangli Station
+    var myMapKaffe = {lat: 25.080642, lng: 121.5660205};   // Journey Kaffe
+    var myMapCenter = {lat: 25.0513848, lng: 121.5475527}; // Taipei Arena
     var map = new google.maps.Map(document.getElementById('Map'), {
       zoom: 13,
-      center: myLatLng,
+      center: myMapCenter,
       draggable: false,
       // disableDefaultUI: true,
       scrollwheel: false,
@@ -107,7 +109,7 @@
     });
 
     var marker = new google.maps.Marker({
-      position: myLatLng,
+      position: myMapLatLng,
       map: map,
       title: 'Hello, Northwalker!'
     });
@@ -116,7 +118,7 @@
     google.maps.event.addDomListener(window, 'resize', function() {
       // var center = map.getCenter();
       // console.log('center', center);
-      map.setCenter(myLatLng);
+      map.setCenter(myMapCenter);
     });
   }
 
