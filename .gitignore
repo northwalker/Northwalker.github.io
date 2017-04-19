@@ -1,6 +1,6 @@
 ### Customised .gitignore
 
-### JetBrains, WebStorm
+### WebStorm, JetBrains
 .idea
 
 ### Visual Studio Code
@@ -9,17 +9,19 @@
 ### macOS
 .DS_Store
 
-### Node.gitignore
+### npm
 node_modules
 
-### Bower
+### bower
 bower_components
 
-### build folders
+### development and build folders
 build
 development
 dist
 release
+
+### temporary folders
 tmp
 .tmp
 

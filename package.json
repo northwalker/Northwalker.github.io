@@ -3,6 +3,7 @@
   "version": "0.1.2",
   "description": "Github website for Northwalker",
   "scripts": {
+    "dev": "gulp serve",
     "build": "gulp build"
   },
   "repository": {

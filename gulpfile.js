@@ -1,30 +1,42 @@
 (function () {
   'use strict';
 
-  var path = require('path');
-  var gulp = require('gulp');
-  var autoprefixer = require('gulp-autoprefixer');
-  var concat = require('gulp-concat');
-  var csso = require('gulp-csso');
-  var eslint = require('gulp-eslint');
-  var git = require('gulp-git');
-  var htmlmin = require('gulp-htmlmin');
-  var htmlreplace = require('gulp-html-replace');
-  var replace = require('gulp-replace');
-  var sass = require('gulp-sass');
-  var size = require('gulp-size');
-  var uglify = require('gulp-uglify');
+  const path = require('path');
+  const gulp = require('gulp');
+  const autoprefixer = require('gulp-autoprefixer');
+  const concat = require('gulp-concat');
+  const csso = require('gulp-csso');
+  const eslint = require('gulp-eslint');
+  const git = require('gulp-git');
+  const htmlmin = require('gulp-htmlmin');
+  const htmlreplace = require('gulp-html-replace');
+  const replace = require('gulp-replace');
+  const sass = require('gulp-sass');
+  const size = require('gulp-size');
+  const uglify = require('gulp-uglify');
 
-  var del = require('del');
-  var runSequence = require('run-sequence');
-  var browserSync = require('browser-sync');
-  var reload = browserSync.reload;
-  var pkg = require('./package.json');
-  var version = pkg.version;
-  var gitHash = '';
+  const del = require('del');
+  const runSequence = require('run-sequence');
+  const browserSync = require('browser-sync');
+  const reload = browserSync.reload;
+  const AUTOPREFIXER_BROWSERS = [
+    'ie >= 10',
+    'ie_mob >= 10',
+    'ff >= 30',
+    'chrome >= 34',
+    'safari >= 7',
+    'opera >= 23',
+    'ios >= 7',
+    'android >= 4.4',
+    'bb >= 10'
+  ];
+
+  const pkg = require('./package.json');
+  const version = pkg.version;
+  let gitHash = '';
 
   gulp.task('clean', function (callback) {
-    del(['.tmp', 'dist'], {dot: true})
+    del(['.tmp', 'dist'], { dot: true })
       .then(function (paths) {
         console.log('Deleted files and folders:\n', paths);
         callback();
@@ -32,7 +44,7 @@
   });
 
   gulp.task('git:hash', function (callback) {
-    git.revParse({args: '--short HEAD'}, function (err, hash) {
+    git.revParse({ args: '--short HEAD' }, function (err, hash) {
       // if (err) return;
       if (hash) {
         gitHash = hash;
@@ -47,7 +59,7 @@
       .pipe(replace('<meta name="version" content="">', '<meta name="version" content="' + version + '">'))
       .pipe(replace('<meta name="git-hash" content="">', '<meta name="git-hash" content="' + gitHash + '">'))
       .pipe(gulp.dest('./dist'))
-      .pipe(size({title: 'versionize', showFiles: true, pretty: true}));
+      .pipe(size({ title: 'versionize', showFiles: true, pretty: true }));
   });
 
   gulp.task('lint', function () {
@@ -68,19 +80,19 @@
   gulp.task('json', function () {
     gulp.src('src/json/**/*.json')
       .pipe(gulp.dest('dist/json'))
-      .pipe(size({title: 'json', showFiles: true, pretty: true}));
+      .pipe(size({ title: 'json', showFiles: true, pretty: true }));
   });
 
   gulp.task('fonts', function () {
     gulp.src('src/fonts/**/*')
       .pipe(gulp.dest('dist/fonts'))
-      .pipe(size({title: 'fonts', showFiles: true, pretty: true}));
+      .pipe(size({ title: 'fonts', showFiles: true, pretty: true }));
   });
 
   gulp.task('misc', function () {
     return gulp.src('./favicon.png')
       .pipe(gulp.dest('dist'))
-      .pipe(size({title: 'misc', showFiles: true, pretty: true}));
+      .pipe(size({ title: 'misc', showFiles: true, pretty: true }));
   });
 
   gulp.task('copy', function () {
@@ -88,35 +100,23 @@
       './robot.txt',
       '!' + './favicon*',
       '!' + './*.html'
-    ], {
-      dot: true
-    })
+    ], { dot: true })
       .pipe(gulp.dest('dist'))
-      .pipe(size({title: 'copy', showFiles: true, pretty: true}));
+      .pipe(size({ title: 'copy', showFiles: true, pretty: true }));
   });
 
   gulp.task('images', function () {
     return gulp.src('src/img/**/*')
-    // .pipe($.cache(imagemin({
-    //   progressive: true,
-    //   interlaced: true
-    // })))
+      // .pipe($.cache(imagemin({
+      //   progressive: true,
+      //   interlaced: true
+      // })))
       .pipe(gulp.dest('dist/img'))
-      .pipe(size({title: 'images', showFiles: false, pretty: true}));
+      .pipe(size({ title: 'images', showFiles: false, pretty: true }));
   });
 
   gulp.task('styles', function () {
-    var AUTOPREFIXER_BROWSERS = [
-      'ie >= 10',
-      'ie_mob >= 10',
-      'ff >= 30',
-      'chrome >= 34',
-      'safari >= 7',
-      'opera >= 23',
-      'ios >= 7',
-      'android >= 4.4',
-      'bb >= 10'
-    ];
+
     return gulp.src(['./src/css/**/*.css'])
       .pipe(autoprefixer({
         browsers: AUTOPREFIXER_BROWSERS
@@ -124,7 +124,7 @@
       .pipe(concat('main.min.css'))
       .pipe(csso())
       .pipe(gulp.dest('dist/css'))
-      .pipe(size({title: 'styles', showFiles: false, pretty: true}));
+      .pipe(size({ title: 'styles', showFiles: false, pretty: true }));
   });
 
   gulp.task('scripts', function () {
@@ -141,7 +141,7 @@
         preserveComments: false   // 'all', 'license', 'function'
       }))
       .pipe(gulp.dest('dist/js'))
-      .pipe(size({title: 'scripts', showFiles: false, pretty: true}));
+      .pipe(size({ title: 'scripts', showFiles: false, pretty: true }));
   });
 
   gulp.task('html', function () {
@@ -164,7 +164,7 @@
         minifyCSS: true
       }))
       .pipe(gulp.dest('dist'))
-      .pipe(size({title: 'html', showFiles: true, pretty: true}));
+      .pipe(size({ title: 'html', showFiles: true, pretty: true }));
   });
 
   gulp.task('serve', ['clean'], function () {
