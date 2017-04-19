@@ -1,6 +1,6 @@
 {
   "name": "northwalker-github-io",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Github website for Northwalker",
   "scripts": {
     "build": "gulp build"

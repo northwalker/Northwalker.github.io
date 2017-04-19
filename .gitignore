@@ -6,7 +6,7 @@
 ### Visual Studio Code
 .vscode
 
-### OSX
+### macOS
 .DS_Store
 
 ### Node.gitignore
@@ -15,20 +15,16 @@ node_modules
 ### Bower
 bower_components
 
-### Other folders
+### build folders
+build
 development
-release
 dist
+release
 tmp
 .tmp
 
-### SASS.gitignore
-.sass-cache/
-*.css.map
-
 ### Logs
-logs
-*.log
+*.log*
 npm-debug.log*
 
 ### Others

@@ -1,4 +1,5 @@
 /* ---- reset ---- */
+
 .test-autoprefixer {
   display: flex;
 }
@@ -8,7 +9,8 @@ body {
   padding: 0;
   /*font: normal 75% Helvetica, Arial, sans-serif;*/
   font-size: 16px;
-  font-family: "Helvetica Neue", Helvetica, Arial, "Microsoft JhengHei", sans-serif;;
+  font-family: "Helvetica Neue", Helvetica, Arial, "Microsoft JhengHei", sans-serif;
+  ;
   color: #000000;
   background-color: #2A2730;
 }
@@ -30,28 +32,30 @@ canvas {
   font-family: 'Lato', sans-serif;
 }
 
+
 /* ---- particles.js container ---- */
+
 #particles-js {
   position: absolute;
   width: 100%;
   height: 780px;
-  background-color: #000000;  /* Default color */
+  background-color: #000000;
+  /* Default color */
   /*background: url('https://static.northwalker.site/background/ST-sky-lantern.jpg') no-repeat center center fixed;*/
   /*background:url(https://static.northwalker.site/background/NewYork201610.jpg);*/
   background-image: url(https://static.northwalker.site/background/NewYork-2016-1.jpg);
   background-size: cover;
   background-position: 50% 50%;
   background-repeat: no-repeat;
-
-
 }
 
 @media (min-width: 768px) {
-	#particles-js {
-		/*Mobile broswer disable attachment: fixed;*/
-		background-attachment: fixed;
-	}
+  #particles-js {
+    /*Mobile broswer disable attachment: fixed;*/
+    background-attachment: fixed;
+  }
 }
+
 
 /* ----- nw-navigation ----- */
 
@@ -62,10 +66,10 @@ canvas {
   width: 100%;
   color: #FFFFFF;
   /*height: 90px;*/
-  min-height: 90px; /* 給予 RWD 彈性 */
+  min-height: 90px;
+  /* 給予 RWD 彈性 */
   text-align: center;
   background: transparent;
-
   display: -webkit-flex;
   display: flex;
 }
@@ -74,24 +78,18 @@ canvas {
   height: 90px;
   color: #FFFFFF;
   font-size: 44px;
-
   /* div 垂直置中  */
   display: -webkit-flex;
   display: flex;
-
   /*-webkit-flex: none;*/
   /*flex: none;*/
-
   -webkit-align-items: center;
   align-items: center;
-
-  -webkit-flex: 1; /* flex-grow */
+  -webkit-flex: 1;
+  /* flex-grow */
   flex: 1;
-
   justify-content: space-between;
-
   margin-left: 150px;
-
   /*border: 1px solid blue;*/
 }
 
@@ -104,34 +102,28 @@ canvas {
 .nw-navigation-brand .nw-navigation-brand-list {
   /* default */
   /*display: none;*/
-
 }
 
-.nw-navigation-brand-list{
+.nw-navigation-brand-list {
   width: 100%;
   padding-right: 15px;
   padding-left: 60px;
-
   display: -webkit-flex;
-  display: flex ;
-
+  display: flex;
   -webkit-flex-direction: row;
   flex-direction: row;
-
   /* 兩端使用 padding right left 控制較優 */
   -webkit-justify-content: space-between;
   justify-content: space-between;
-
 }
 
-.nw-navigation-brand-list-item{
+.nw-navigation-brand-list-item {
   cursor: pointer;
 }
 
-.nw-navigation-brand-list-item:hover{
+.nw-navigation-brand-list-item:hover {
   cursor: pointer;
   color: #4994f2;
-
   -webkit-transition: color .3s ease;
   -moz-transition: color .3s ease;
   -ms-transition: color .3s ease;
@@ -141,34 +133,28 @@ canvas {
 
 .nw-navigation-list {
   height: 90px;
-
   display: -webkit-flex;
   display: flex;
-
-  -webkit-flex-: 2; /* flex-grow */
+  -webkit-flex-: 2;
+  /* flex-grow */
   flex: 2;
-
   /* 垂直置中 */
   -webkit-align-items: center;
   align-items: center;
   /* 水平靠右 */
   -webkit-justify-content: flex-end;
   justify-content: flex-end;
-
-  margin-right: 75px; /* 可能需要依據 menu list item數量做 RWD 修改*/
-
+  margin-right: 75px;
+  /* 可能需要依據 menu list item數量做 RWD 修改*/
 }
 
 .nw-navigation-list ul li {
-
   display: inline-block;
   position: relative;
-
   /*cursor: pointer;*/
   background-color: transparent;
   padding-left: 10px;
   padding-right: 10px;
-
 }
 
 .nw-navigation-list ul li:after {
@@ -190,12 +176,10 @@ canvas {
 
 .nw-navigation-list ul li span {
   /* 增加這一層控制底線長度 */
-
 }
 
 .nw-navigation-list ul li a {
   height: 90px;
-
   cursor: pointer;
   font-size: 20px;
   text-decoration: none;
@@ -212,37 +196,33 @@ canvas {
   color: #4994f2;
 }
 
-.nw-navigation-list ul li a .linkText{
+.nw-navigation-list ul li a .linkText {
   padding-left: 10px;
   vertical-align: bottom;
-
 }
 
 @media (min-width: 1400px) {
-
-  .nw-navigation-list{
+  .nw-navigation-list {
     margin-right: 150px;
   }
   .nw-navigation-list ul li {
     padding-left: 20px;
     padding-right: 20px;
   }
-
 }
 
 @media (max-width: 1440px) {
-
-  .nw-navigation-list{
+  .nw-navigation-list {
     margin-right: 100px;
   }
   .nw-navigation-list ul {
-    padding-left: 10px; /*overwrite ul default*/
+    padding-left: 10px;
+    /*overwrite ul default*/
   }
   .nw-navigation-list ul li {
     padding-left: 15px;
     padding-right: 15px;
   }
-
 }
 
 @media (max-width: 1024px) {
@@ -251,13 +231,12 @@ canvas {
     margin-left: 60px;
     font-size: 36px;
   }
-
   .nw-navigation-list {
     margin-right: 50px;
   }
-
   .nw-navigation-list ul {
-    padding-left: 0px; /*overwrite ul default*/
+    padding-left: 0px;
+    /*overwrite ul default*/
   }
   .nw-navigation-list ul li {
     padding-left: 5px;
@@ -266,51 +245,42 @@ canvas {
 }
 
 @media (max-width: 768px) {
-
   .nw-navigation {
     /*display: flex;*/
-    -webkit-flex-direction: column; /* 如果需顯示 nw-navigation-list */
+    -webkit-flex-direction: column;
+    /* 如果需顯示 nw-navigation-list */
     flex-direction: column;
   }
-
   .nw-navigation-brand {
     height: 90px;
     margin-left: 15px;
     margin-right: 15px;
     font-size: 36px;
   }
-
   .nw-navigation-list {
-    height: auto; /* 隨 ul li 增加*/
-
+    height: auto;
+    /* 隨 ul li 增加*/
     -webkit-justify-content: flex-start;
     justify-content: flex-start;
-
     margin-left: 15px;
     margin-right: 15px;
   }
-
   .nw-navigation-list ul {
     width: 100%;
     margin: 0 auto;
-
     /*background-color: rgba(0, 0, 0, 0.9);*/
     border-radius: 5px;
-
   }
-
   .nw-navigation-list ul li {
     width: 100%;
     text-align: left;
   }
-
   .nw-navigation-list ul li a {
     width: 100%;
     text-align: left;
     line-height: 48px;
     padding: 0;
   }
-
 }
 
 .nw-navbar-shadow {
@@ -323,31 +293,28 @@ canvas {
   -ms-transition: all .3s ease-in-out;
   -o-transition: all .3s ease-in-out;
   transition: all .3s ease-in-out;
-
-
   /* Adds shadow to the bottom of the bar */
   -webkit-box-shadow: 0px 0px 8px 0px #000000;
   -moz-box-shadow: 0px 0px 8px 0px #000000;
   box-shadow: 0px 0px 8px 0px #000000;
-
 }
 
 .nw-navbar-shadow-2x {
-
   background-color: rgba(0, 0, 0, 0.9);
   -webkit-transition: all .3s ease-in-out;
   -moz-transition: all .3s ease-in-out;
   -ms-transition: all .3s ease-in-out;
   -o-transition: all .3s ease-in-out;
   transition: all .3s ease-in-out;
-
   /* Adds shadow to the bottom of the bar */
   -webkit-box-shadow: 0px 0px 8px 0px #000000;
   -moz-box-shadow: 0px 0px 8px 0px #000000;
   box-shadow: 0px 0px 8px 0px #000000;
 }
 
+
 /* ----- page-hero ----- */
+
 .page-hero {
   color: #fff;
   text-align: center;
@@ -363,12 +330,10 @@ canvas {
 }
 
 .page-hero .title-1 {
-
   top: 400px;
   position: relative;
-
-  padding-left:  15px;
-  padding-right:  15px;
+  padding-left: 15px;
+  padding-right: 15px;
   font-size: 44px;
   /*font-weight: 300;*/
   z-index: 50;
@@ -376,11 +341,10 @@ canvas {
 }
 
 .page-hero .title-2 {
-
   top: 430px;
   position: relative;
-  padding-left:  15px;
-  padding-right:  15px;
+  padding-left: 15px;
+  padding-right: 15px;
   font-size: 28px;
   /*font-weight: 300;*/
   z-index: 50;
@@ -388,13 +352,12 @@ canvas {
 }
 
 .page-hero .nw-btn {
-
   top: 480px;
   position: relative;
-
   padding: 15px;
   margin: 15px;
-  fill: #FFFFFF; /* For SVG icon */
+  fill: #FFFFFF;
+  /* For SVG icon */
   color: #FFFFFF;
   font-size: 24px;
   font-weight: bold;
@@ -407,17 +370,16 @@ canvas {
 }
 
 .page-hero .nw-btn:hover {
-  fill: #4994f2; /* For SVG icon */
+  fill: #4994f2;
+  /* For SVG icon */
   color: #4994f2;
   background: transparent;
   border: 5px solid #4994f2;
-
   -webkit-transition: all .3s ease;
   -moz-transition: all .3s ease;
   -ms-transition: all .3s ease;
   -o-transition: all .3s ease;
   transition: all .3s ease;
-
 }
 
 #le-dots {
@@ -426,13 +388,13 @@ canvas {
   right: 0;
   top: 0;
   /*bottom: 0;*/
-
   /*left: -100px;*/
   /*right: -100px;*/
   /*top: -100px;*/
   /*bottom: -100px;*/
   z-index: 5;
 }
+
 
 /* ----- section-about ----- */
 
@@ -447,11 +409,9 @@ canvas {
 
 .about-container {
   font-size: 20px;
-
   padding-top: 400px;
   padding-left: 150px;
   padding-right: 150px;
-
   color: white;
 }
 
@@ -528,20 +488,20 @@ canvas {
   margin: 5px;
 }
 
+
 /* ----- section-skill ----- */
 
-.skill{
+.skill {
   background-color: #FFFFFF;
-  padding-top: 50px; /* maybe for temp*/
+  padding-top: 50px;
+  /* maybe for temp*/
   padding-bottom: 50px;
 }
 
 .skill-card-container {
   /*border: 1px solid lightblue;*/
-
   /*padding-top: 75px;*/
   /*padding-bottom: 25px;*/
-
   display: -webkit-flex;
   display: flex;
   -webkit-flex-wrap: wrap;
@@ -554,11 +514,11 @@ canvas {
   width: 30%;
   margin: 15px;
   /*padding: 15px;*/
-
-  border: 2px solid limegreen;  /* 影響 flex */
+  border: 2px solid limegreen;
+  /* 影響 flex */
   border-radius: 7px;
-
-  /*display: flex;*/             /* icon 與 content 並排 */
+  /*display: flex;*/
+  /* icon 與 content 並排 */
   /*-webkit-justify-content: center;*/
   /*justify-content: center;*/
 }
@@ -602,15 +562,16 @@ canvas {
 }
 
 .skill-card-content-list {
-  color: limegreen;  /* for li bullet */
+  color: limegreen;
+  /* for li bullet */
   font-size: 18px;
   margin-top: 20px;
-
   /* over write ul */
 }
 
-.skill-card-content-list span{
-  color: black;     /* for li text */
+.skill-card-content-list span {
+  color: black;
+  /* for li text */
 }
 
 .skill-card-content-list .second-list {
@@ -618,21 +579,42 @@ canvas {
   color: black;
 }
 
+
 /* ----- section-education ----- */
 
+
 /*.education {*/
+
+
 /*width: 100%;*/
+
+
 /*height: 300px;*/
+
+
 /*background-color: #FFFFFF;*/
+
+
 /*}*/
+
 
 /* ----- section-experience ----- */
 
+
 /*.experience {*/
+
+
 /*width: 100%;*/
+
+
 /*height: 300px;*/
+
+
 /*background-color: #FFFFFF;*/
+
+
 /*}*/
+
 
 /* ----- section-contact ----- */
 
@@ -640,26 +622,23 @@ canvas {
   width: 100%;
   height: 300px;
   background-image: url('https://static.northwalker.site/background/ST-sky-lantern.jpg');
-
   background-size: cover;
   background-position: top;
   background-repeat: no-repeat;
 }
 
 @media (min-width: 768px) {
-	.contact {
-		/*Mobile broswer disable attachment: fixed;*/
-		background-attachment: fixed;
-	}
+  .contact {
+    /*Mobile broswer disable attachment: fixed;*/
+    background-attachment: fixed;
+  }
 }
 
 .contact-container {
-
   padding: 150px 15px 60px;
   display: -webkit-flex;
   display: flex;
   flex-direction: row;
-
   -webkit-align-items: center;
   align-items: center;
   justify-content: center;
@@ -685,7 +664,6 @@ canvas {
   -ms-transition: all .3s ease-in-out;
   -o-transition: all .3s ease-in-out;
   transition: all .3s ease-in-out;
-
 }
 
 .contact-info-text {
@@ -697,6 +675,7 @@ canvas {
   /*font-size: 24px;*/
 }
 
+
 /* ----- section-additional ----- */
 
 .additional {
@@ -706,16 +685,13 @@ canvas {
   /*background-color: #37c0fb;*/
   background-image: linear-gradient(75deg, #FF7088 15%, #F2B69D 55%);
   background-color: #f08c89;
-
   display: none;
 }
 
 .additional-container {
-
   padding: 100px 15px 60px;
   display: flex;
   flex-direction: row;
-
   -webkit-align-items: center;
   align-items: center;
   justify-content: center;
@@ -738,7 +714,6 @@ canvas {
   -ms-transition: all .3s ease;
   -o-transition: all .3s ease;
   transition: all .3s ease;
-
 }
 
 .additional-info-text {
@@ -753,12 +728,14 @@ canvas {
   font-size: 40px;
 }
 
+
 /* ----- section-gmap ----- */
 
 .map {
   width: 100%;
   height: 400px;
 }
+
 
 /* ----- nw-footer ----- */
 
@@ -769,25 +746,21 @@ canvas {
 }
 
 .nw-footer .nw-footer-content {
-
   /*height: 200px;*/
-
   width: 100%;
   color: #FFFFFF;
   background-color: #2A2730;
-
-  padding: 60px 0 20px 0; /* top right bottom left*/
+  padding: 60px 0 20px 0;
+  /* top right bottom left*/
   color: #FFFFFF;
   text-shadow: none;
   text-align: center;
-
 }
 
 .nw-footer .nw-footer-content a {
   padding: 10px;
   text-decoration: none;
   color: #FFFFFF;
-
   -webkit-transition: color .3s ease;
   -moz-transition: color .3s ease;
   -ms-transition: color .3s ease;
@@ -797,7 +770,6 @@ canvas {
 
 .nw-footer .nw-footer-content a:hover {
   color: #E7746F;
-
 }
 
 .nw-footer .copy-right {
@@ -805,13 +777,19 @@ canvas {
 }
 
 @media (max-width: 400px) {
-	.nw-footer .nw-footer-content .hide-when-xs {
-		display: none; /* TEMP for RWD */
-	}
+  .nw-footer .nw-footer-content .hide-when-xs {
+    display: none;
+    /* TEMP for RWD */
+  }
 }
 
+
 /* ============================================================ */
+
+
 /* ============================================================ */
+
+
 /* ============================================================ */
 
 .icon-vertical-align {

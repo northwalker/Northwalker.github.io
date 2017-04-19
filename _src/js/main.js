@@ -62,7 +62,7 @@
   $('.goToContact').on('click', function () {
 
     $('html, body').animate({
-      scrollTop: ( $('#Contact').offset().top - 420 )
+      scrollTop: ($('#Contact').offset().top - 420)
     }, 600);
     return false;
   });
@@ -96,9 +96,9 @@
   });
 
   function initMap() {
-    var myMapLatLng = {lat: 25.023739, lng: 121.553004};   // Liuzhangli Station
-    var myMapKaffe = {lat: 25.080642, lng: 121.5660205};   // Journey Kaffe
-    var myMapCenter = {lat: 25.0513848, lng: 121.5475527}; // Taipei Arena
+    var myMapLatLng = { lat: 25.023739, lng: 121.553004 };   // Liuzhangli Station
+    var myMapKaffe = { lat: 25.080642, lng: 121.5660205 };   // Journey Kaffe
+    var myMapCenter = { lat: 25.0513848, lng: 121.5475527 }; // Taipei Arena
     var map = new google.maps.Map(document.getElementById('Map'), {
       zoom: 13,
       center: myMapCenter,
@@ -115,7 +115,7 @@
     });
 
     // Add resize reload event
-    google.maps.event.addDomListener(window, 'resize', function() {
+    google.maps.event.addDomListener(window, 'resize', function () {
       // var center = map.getCenter();
       // console.log('center', center);
       map.setCenter(myMapCenter);
