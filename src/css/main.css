@@ -17,7 +17,6 @@ body {
 
 canvas {
   display: block;
-  vertical-align: bottom;
 }
 
 .fontArchivoBlack {
@@ -38,7 +37,8 @@ canvas {
 #particles-js {
   position: absolute;
   width: 100%;
-  height: 780px;
+  height: 100vh;
+  min-height: 780px;
   background-color: #000000;
   /* Default color */
   /*background: url('https://static.northwalker.site/background/ST-sky-lantern.jpg') no-repeat center center fixed;*/
@@ -47,12 +47,13 @@ canvas {
   background-size: cover;
   background-position: 50% 50%;
   background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
-@media (min-width: 768px) {
+@media (max-width: 768px) {
   #particles-js {
     /*Mobile broswer disable attachment: fixed;*/
-    background-attachment: fixed;
+    background-attachment: scroll;
   }
 }
 
@@ -316,13 +317,14 @@ canvas {
 /* ----- page-hero ----- */
 
 .page-hero {
+
+  position: relative;
+  height: 100vh;
+  min-height: 780px;
+  overflow: hidden;
   color: #fff;
   text-align: center;
   background-color: #1A222C;
-  min-height: 780px;
-  /*margin-top: -86px;*/
-  position: relative;
-  overflow: hidden;
 }
 
 .page-hero .container {
@@ -400,7 +402,8 @@ canvas {
 
 .about {
   width: 100%;
-  height: 780px;
+  height: 100vh;
+  min-height: 780px;
   background-image: url('https://static.northwalker.site/background/greenCoverTaiChung.jpg');
   background-repeat: no-repeat;
   background-size: cover;
