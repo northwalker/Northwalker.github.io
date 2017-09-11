@@ -1,0 +1,37 @@
+#contact {
+  width: 100vw;
+  height: 220px;
+  background-color: #3A3636;
+  border-bottom: 1px dashed #FFFFFF;
+  .container {
+    width: 250px;
+    margin: 0 auto;
+    padding: 80px 0;
+    .contact-btn {
+      display: block;
+      width: 250px;
+      text-align: center;
+      border: 1px solid #FFFFFF;
+      border-radius: 6px;
+      color: #FFFFFF;
+      font-size: 28px;
+      line-height: 60px;
+      transition: color .3s ease, border .3s ease;
+      cursor: pointer;
+      .text {
+        display: inline-block;
+        vertical-align: middle;
+      }
+      .envelope {
+        display: inline-block;
+        vertical-align: middle;
+        margin-left: 10px;
+        margin-right: 10px;
+      }
+      &:hover {
+        color: orange;
+        border: 1px solid orange;
+      }
+    }
+  }
+}

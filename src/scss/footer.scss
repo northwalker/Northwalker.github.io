@@ -1,0 +1,32 @@
+#footer {
+  width: 100vw;
+  min-height: 220px; //
+  padding-top: 70px; //
+  padding-bottom: 20px; //
+  text-align: center;
+  color: #FFFFFF; //
+  // background-color: #2A2730;
+  background-color: #3A3636;
+  .container {
+    a {
+      display: inline-block;
+      padding: 10px;
+      text-decoration: none;
+      color: #FFFFFF;
+      transition: color .5s ease, transform .5s ease;
+      cursor: pointer;
+      &:hover {
+        color: #3475C0; // #E7746F;
+        transform: translate3d(0, -7px, 0);
+      }
+    }
+    .hidden-xs {
+      @media (max-width: 576px) {
+        display: none;
+      }
+    }
+  }
+  .copyright {
+    margin: 20px;
+  }
+}

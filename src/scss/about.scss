@@ -1,0 +1,71 @@
+#about {
+  width: 100vw;
+  height: 100vh;
+  min-height: 700px;
+  background-color: #3A3636; //
+  background-image: url(https://static.northwalker.site/background/greenCoverTaiChung.jpg);
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat; // background-attachment: fixed;
+  @media (max-width: 768px) {
+    /*Mobile broswer disable attachment: fixed;*/
+    // background-attachment: scroll;
+  }
+  .container {
+    padding-top: 400px;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: #FFFFFF;
+    font-size: 20px; //
+    // transition:  .3s ease;
+    @media (min-width: 1440px) {
+      padding-top: 300px;
+      padding-left: 150px;
+      padding-right: 150px;
+    }
+    @media (min-width: 1200px) and (max-width: 1440px) {
+      max-width: 944px;
+      padding-top: 400px;
+      padding-left: 0;
+      padding-right: 0;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    @media (min-width: 1024px) and (max-width: 1200px) {
+      max-width: 944px;
+      padding-top: 400px;
+      padding-left: 0;
+      padding-right: 0;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    @media (min-width: 900px) and (max-width: 1024px) {
+      padding-top: 400px;
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+    @media (min-width: 768px) and (max-width: 900px) {
+      padding-top: 350px;
+      padding-left: 35px;
+      padding-right: 35px;
+    }
+    @media (min-width: 490px) and (max-width: 768px) {
+      padding-top: 300px;
+    }
+    @media (min-width: 400px) and (max-width: 490px) {
+      padding-top: 200px;
+    }
+    @media (max-width: 400px) {
+      padding-top: 50px;
+    }
+    .about-text-container {
+      margin-top: 50px;
+      border-radius: 8px;
+      padding: 5px;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+    .about-text {
+      margin: 5px;
+    }
+  }
+}

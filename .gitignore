@@ -1,0 +1,19 @@
+
+### npm
+node_modules
+
+### macOS
+.DS_Store
+
+### Visual Studio Code
+.vscode
+
+### WebStorm, JetBrains
+.idea
+
+### temporary folders
+tmp
+.tmp
+
+### Logs
+*.log*
