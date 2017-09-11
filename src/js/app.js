@@ -6,8 +6,9 @@
 
 import '../scss/app.scss'
 import favicon from '../img/N.png'
-// import './lib/googleMapApi.js'   // use webpack entry inject
-// import './lib/particles.js'      // use webpack entry inject
+// import './lib/googleAnalytics.js'  // use webpack entry inject
+// import './lib/googleMap.js'        // use webpack entry inject
+// import './lib/particles.js'        // use webpack entry inject
 import particlesConfig from './lib/particles.config.js'
 import smoothScrolling from './lib/smoothScrolling.js'
 
@@ -19,8 +20,7 @@ function initParticlesJS() {
   particlesJS('js-particles', particlesConfig)
 }
 
-function initMap() {
-  console.log()
+function initGoogleMap() {
   if (typeof (google) == 'undefined')
     return;
 
@@ -58,13 +58,6 @@ function initFavicon() {
   document.querySelector('[rel=icon]').href = favicon || 'favicon.png'
 }
 
-function initBackgroundImages() {
-  const homeBackground = 'https://static.northwalker.site/background/NewYork-2016-1.jpg'
-  const aboutBackground = 'https://static.northwalker.site/background/greenCoverTaiChung.jpg'
-  document.querySelector('#home').style.backgroundImage = ('url(' + homeBackground + ')')
-  document.querySelector('#about').style.backgroundImage = ('url(' + aboutBackground + ')')
-}
-
 function initHeaderLinks() {
   const links = document.querySelectorAll('.link');
   Object.keys(links).map(function (i) {
@@ -80,10 +73,9 @@ function init() {
   console.log('%c Hello! ^________________^', 'color: #4994F2; font-size: 24px; font-weight: bold;')
   console.log('%c Greeting from Northwalker.', 'color: #4994F2; font-size: 24px; font-weight: bold;')
   initFavicon()
-  // initBackgroundImages()
-  initMap()
   initParticlesJS()
   initHeaderLinks()
+  initGoogleMap()
 }
 
 function headerOnScroll() {

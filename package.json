@@ -9,9 +9,9 @@
     "watch": "npm run dev",
     "prebuild": "rm -rf docs",
     "build": "cross-env NODE_ENV=production webpack --progress --hide-modules --config webpack.config.js",
-    "postbuild": "npm run copyIndex",
+    "postbuild": "npm run copyIndexHtml",
     "lint": "eslint ./src/*.js",
-    "copyIndex": "mv ./dist/index.html ./"
+    "copyIndexHtml": "mv ./dist/index.html ./"
   },
   "author": "Northwalker",
   "homepage": "https://github.com/northwalker/Northwalker.github.io#readme",

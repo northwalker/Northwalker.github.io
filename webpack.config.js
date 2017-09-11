@@ -20,7 +20,8 @@ const config = {
     hints: false
   },
   entry: {
-    googleMapApi: path.join(__dirname, './src/js/lib/googleMapApi.js'),
+    // googleAnalytics: path.join(__dirname, './src/js/lib/googleAnalytics.js'),
+    // googleMap: path.join(__dirname, './src/js/lib/googleMap.js'),
     particles: path.join(__dirname, './src/js/lib/particles.js'),
     app: path.join(__dirname, './src/js/app.js')
   },
