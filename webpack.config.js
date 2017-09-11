@@ -25,10 +25,10 @@ const config = {
     app: path.join(__dirname, './src/js/app.js')
   },
   output: {
-    path: path.join(__dirname, './docs'),
-    publicPath: '',
+    path: path.join(__dirname, './dist'),
+    publicPath: isProduction ? './dist/' : '',
     filename: isProduction
-      ? 'assets/js/[name].[chunkhash:7].js'
+      ? 'js/[name].[chunkhash:7].js'
       : '[name].js'
   },
   module: {
@@ -62,7 +62,7 @@ const config = {
         options: {
           limit: 10000,
           name: isProduction
-            ? 'assets/font/[name].[hash:7].[ext]'
+            ? 'font/[name].[hash:7].[ext]'
             : '[name].[hash:7].[ext]'
         }
       },
@@ -72,7 +72,7 @@ const config = {
         options: {
           limit: 10000,
           name: isProduction
-            ? 'assets/img/[name].[hash:7].[ext]'
+            ? 'img/[name].[hash:7].[ext]'
             : '[name].[hash:7].[ext]'
         }
       },
@@ -81,7 +81,7 @@ const config = {
       //   loader: 'file-loader',
       //   options: {
       //     name: isProduction
-      //     ? 'assets/json/[name].[ext]'
+      //     ? 'json/[name].[ext]'
       //     : '[name].[ext]'
       //   }
       // }
@@ -99,7 +99,7 @@ const config = {
     new HtmlWebpackPlugin({
       inject: 'head',
       filename: 'index.html',
-      template: path.join(__dirname, './index.html'),
+      template: path.join(__dirname, './src/index.html'),
       chunksSortMode: function (entry1, entry2) {
         return 1; // <-- your fancy array sort method goes here :)
       }
@@ -119,7 +119,7 @@ if (isProduction) {
       inlineSource: '.js$',
       inject: 'head',
       filename: 'index.html',
-      template: path.join(__dirname, './index.html'),
+      template: path.join(__dirname, './src/index.html'),
       minify: {
         html5: true,
         removeComments: true,
