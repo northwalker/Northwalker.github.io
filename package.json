@@ -1,13 +1,13 @@
 {
   "name": "northwalker-github-io",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Github website for Northwalker",
   "main": "index.js",
   "scripts": {
     "start": "npm run dev",
     "dev": "cross-env NODE_ENV=development webpack-dev-server --inline --open --hot --config webpack.config.js",
     "watch": "npm run dev",
-    "prebuild": "rm -rf docs",
+    "prebuild": "rm -rf dist",
     "build": "cross-env NODE_ENV=production webpack --progress --hide-modules --config webpack.config.js",
     "postbuild": "npm run copyIndexHtml",
     "lint": "eslint ./src/*.js",

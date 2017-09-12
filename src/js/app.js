@@ -42,7 +42,7 @@ function initGoogleMap() {
   const marker = new google.maps.Marker({
     position: myMapJourneyKaffe,
     map: map,
-    title: 'Hello, Northwalker!'
+    title: 'Hello, visitor of Northwalker!'
   })
 
   // Add resize reload event
