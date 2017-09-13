@@ -5,7 +5,7 @@
  */
 
 import '../scss/app.scss'
-import favicon from '../img/N.png'
+import favicon from '../img/64x64.png'
 // import './lib/googleAnalytics.js'  // use webpack entry inject
 // import './lib/googleMap.js'        // use webpack entry inject
 // import './lib/particles.js'        // use webpack entry inject
@@ -55,7 +55,7 @@ function initGoogleMap() {
 }
 
 function initFavicon() {
-  document.querySelector('[rel=icon]').href = favicon || 'favicon.png'
+  document.querySelector('[rel=icon]').href = favicon || 'favicon.ico'
 }
 
 function initHeaderLinks() {
@@ -84,7 +84,7 @@ function headerOnScroll() {
 
   if (window.pageYOffset === 0)
     window.headerElement.style.backgroundColor = 'rgba(0, 0, 0, 0)';
-  else if (window.pageYOffset > 20)
+  else if (window.pageYOffset > 100)
     window.headerElement.style.backgroundColor = 'rgba(0, 0, 0, 0.8)';
 }
 
