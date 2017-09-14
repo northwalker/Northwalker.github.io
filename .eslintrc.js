@@ -1,8 +1,6 @@
 
 module.exports = {
   root: true,
-  // extends: 'eslint:recommended',
-  // add your custom rules here
   env: {
     browser: true,
   },
@@ -10,6 +8,8 @@ module.exports = {
     ecmaVersion: 6,
     sourceType: "module",
   },
+  extends: ['eslint:recommended', 'standard'],
+  // add your custom rules here
   rules: {
     // 'arrow-parens': 0, // allow paren-less arrow functions
     // 'generator-star-spacing': 0, // allow async-await

@@ -6,30 +6,41 @@
 
 import '../scss/app.scss'
 import favicon from '../img/64x64.png'
-// import './lib/googleAnalytics.js'  // use webpack entry inject
 // import './lib/googleMap.js'        // use webpack entry inject
 // import './lib/particles.js'        // use webpack entry inject
 import particlesConfig from './lib/particles.config.js'
 import smoothScrolling from './lib/smoothScrolling.js'
 
-function initParticlesJS() {
+/**
+ * initParticlesJS
+ * @constructor
+ */
+function initParticlesJS () {
   /* particlesJS.load(@dom-id, @path-json, @callback (optional)) */
   // particlesJS.load('js-particles', particlesConfigPath, function () {
   //   console.log('callback - particles.js config loaded')
   // })
+
+  // eslint-disable-next-line no-undef
   particlesJS('js-particles', particlesConfig)
 }
 
-function initGoogleMap() {
+/**
+ * initGoogleMap
+ * @constructor
+ */
+function initGoogleMap () {
+  /* eslint-disable */
   if (typeof (google) == 'undefined')
     return;
 
-  const mapElement = document.querySelector('#map')
-  mapElement.style.height = '100vh'
+  const mapElement = document.querySelector('#map');
+  mapElement.style.height = '100vh';
 
-  const myMapLatLng = { lat: 25.023739, lng: 121.553004 }           // Liuzhangli Station
-  const myMapJourneyKaffe = { lat: 25.080642, lng: 121.5660205 }    // Journey Kaffe
-  const myMapCenter = { lat: 25.0513848, lng: 121.5475527 }         // Taipei Arena
+  const myMapLatLng = { lat: 25.023739, lng: 121.553004 };           // Liuzhangli Station
+  const myMapJourneyKaffe = { lat: 25.080642, lng: 121.5660205 };    // Journey Kaffe
+  const myMapCenter = { lat: 25.0513848, lng: 121.5475527 };         // Taipei Arena
+
   const map = new google.maps.Map(document.querySelector('#map'), {
     zoom: 13,
     center: myMapCenter,
@@ -52,52 +63,70 @@ function initGoogleMap() {
     // console.log('resize')
     map.setCenter(myMapCenter)
   })
+
+  /* eslint-enable */
 }
 
-function initFavicon() {
+/**
+ * initFavicon
+ * @constructor
+ */
+function initFavicon () {
   document.querySelector('[rel=icon]').href = favicon || 'favicon.ico'
 }
 
-function initHeaderLinks() {
-  const links = document.querySelectorAll('.link');
+/**
+ * initHeaderLinks
+ * @constructor
+ */
+function initHeaderLinks () {
+  const links = document.querySelectorAll('.link')
   Object.keys(links).map(function (i) {
     links[i].addEventListener('click', function (e) {
-      e.preventDefault();
-      smoothScrolling(this, 15);
-    });
+      e.preventDefault()
+      smoothScrolling(links[i], 15)
+    })
   })
 }
 
-
-function init() {
-  console.log('%c Hello! ^________________^', 'color: #4994F2; font-size: 24px; font-weight: bold;')
-  console.log('%c Greeting from Northwalker.', 'color: #4994F2; font-size: 24px; font-weight: bold;')
+/**
+ * init
+ * @constructor
+ */
+function init () {
+  const logsStyleString = 'color: #4994F2; font-size: 24px; font-weight: bold;'
+  // eslint-disable-next-line no-console
+  console.log('%c Hello! ^________________^', logsStyleString)
+  // eslint-disable-next-line no-console
+  console.log('%c Greeting from Northwalker.', logsStyleString)
   initFavicon()
   initParticlesJS()
   initHeaderLinks()
   initGoogleMap()
 }
 
-function headerOnScroll() {
-  if (!window.headerElement)
+/**
+ * headerOnScroll
+ * @constructor
+ */
+function headerOnScroll () {
+  if (!window.headerElement) {
     window.headerElement = document.querySelector('#header')
+  }
 
-  if (window.pageYOffset === 0)
-    window.headerElement.style.backgroundColor = 'rgba(0, 0, 0, 0)';
-  else if (window.pageYOffset > 100)
-    window.headerElement.style.backgroundColor = 'rgba(0, 0, 0, 0.8)';
+  if (window.pageYOffset === 0) {
+    window.headerElement.style.backgroundColor = 'rgba(0, 0, 0, 0)'
+  } else if (window.pageYOffset > 100) {
+    window.headerElement.style.backgroundColor = 'rgba(0, 0, 0, 0.8)'
+  }
 }
 
-window.onload = function (e) {
-  // console.log(e)
+window.onload = function () {
   init()
 }
 
-window.onresize = function (e) {
-  // console.log(e)
-}
+window.onresize = function () { }
 
-window.onscroll = function (e) {
-  // console.log(e)
+window.onscroll = function () {
   headerOnScroll()
 }
