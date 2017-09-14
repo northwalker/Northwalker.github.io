@@ -1,37 +1,73 @@
 #contact {
   width: 100vw;
-  height: 220px;
+  min-height: 250px;
   background-color: #3A3636;
   border-bottom: 1px dashed #FFFFFF;
   .container {
-    width: 250px;
+    width: 505px;
+    min-height: 250px;
     margin: 0 auto;
-    padding: 80px 0;
-    .contact-btn {
-      display: block;
+    text-align: center;
+    @media (max-width:768px){
+      width: initial;
+    }
+    .thumbnail-wrapper {
+      display: inline-block;
       width: 250px;
-      text-align: center;
-      border: 1px solid #FFFFFF;
-      border-radius: 6px;
-      color: #FFFFFF;
-      font-size: 28px;
-      line-height: 60px;
-      transition: color .3s ease, border .3s ease;
-      cursor: pointer;
-      .text {
-        display: inline-block;
-        vertical-align: middle;
+      height: 250px;
+      padding: 45px;
+      @media (max-width:768px){
+        display: block;
+        margin: 0 auto;
       }
-      .envelope {
-        display: inline-block;
-        vertical-align: middle;
-        margin-left: 10px;
-        margin-right: 10px;
-      }
-      &:hover {
-        color: orange;
-        border: 1px solid orange;
+      .thumbnail {
+        height: 160px;
+        width: 160px;
+        border-radius: 50%;
+        background-image: url(https://static.northwalker.site/bg/sunsetCover.jpg);
+        background-size: cover;
+        background-position: 50% 50%;
+        vertical-align: top;
       }
     }
+    .mail-wrapper{
+      display: inline-block;
+      width: 250px;
+      margin: 90px auto 45px;
+      vertical-align: top;
+
+      @media (max-width:768px){
+        display: block;
+        margin: 0px auto 45px;
+      }
+      .mail-btn {
+        display: block;
+        width: 250px;
+        height: 65px;
+        text-align: center;
+        border: 1px solid #FFFFFF;
+        border-radius: 6px;
+        color: #FFFFFF;
+        font-size: 28px;
+        line-height: 60px;
+        transition: color .3s ease, border .3s ease;
+        cursor: pointer;
+        .text {
+          display: inline-block;
+          vertical-align: middle;
+        }
+        .envelope {
+          display: inline-block;
+          vertical-align: middle;
+          margin-left: 10px;
+          margin-right: 10px;
+        }
+        &:hover {
+          color: #FFA500;
+          border: 1px solid #FFA500;
+        }
+      }
+    }
+
   }
 }

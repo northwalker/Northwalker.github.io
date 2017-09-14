@@ -14,7 +14,7 @@ const config = {
     hotOnly: true,
     // historyApiFallback: true, // 404s will fallback to...
     overlay: true,
-    noInfo: true,
+    noInfo: true
   },
   performance: {
     hints: false
@@ -55,7 +55,7 @@ const config = {
       },
       {
         test: /\.scss$/,
-        loader: 'style-loader!css-loader!postcss-loader!sass-loader',
+        loader: 'style-loader!css-loader!postcss-loader!sass-loader'
       },
       {
         test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,
@@ -76,7 +76,7 @@ const config = {
             ? 'img/[name].[hash:7].[ext]'
             : '[name].[hash:7].[ext]'
         }
-      },
+      }
       // {
       //   test: /\.json$/,
       //   loader: 'file-loader',
@@ -95,21 +95,21 @@ const config = {
   }, */
   plugins: [
     new webpack.DefinePlugin({
-      'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV),
+      'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV)
     }),
     new HtmlWebpackPlugin({
       inject: 'head',
       filename: 'index.html',
       template: path.join(__dirname, './src/index.html'),
       chunksSortMode: function (entry1, entry2) {
-        return 1; // <-- your fancy array sort method goes here :)
+        return 1 // <-- your fancy array sort method goes here :)
       }
     }),
     new ScriptExtHtmlWebpackPlugin({
       defaultAttribute: 'async'
     }),
     new webpack.optimize.OccurrenceOrderPlugin(),
-    new webpack.NoEmitOnErrorsPlugin(),
+    new webpack.NoEmitOnErrorsPlugin()
   ]
 }
 
@@ -130,17 +130,17 @@ if (isProduction) {
         removeEmptyAttributes: true,
         removeStyleLinkTypeAttributes: true,
         keepClosingSlash: true,
-        // minifyJS: true,
+        minifyJS: true,
         // minifyCSS: true,
         minifyURLs: true,
         hash: true
       },
       chunksSortMode: function (entry1, entry2) {
-        return 1; // <-- your fancy array sort method goes here :)
+        return 1 // <-- your fancy array sort method goes here :)
       }
     }),
     new HtmlWebpackInlineSourcePlugin()
   )
 }
 
-module.exports = config;
+module.exports = config

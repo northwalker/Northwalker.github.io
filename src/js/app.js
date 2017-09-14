@@ -99,7 +99,7 @@ function init () {
   console.log('%c Hello! ^________________^', logsStyleString)
   // eslint-disable-next-line no-console
   console.log('%c Greeting from Northwalker.', logsStyleString)
-  initFavicon()
+  // initFavicon()
   initParticlesJS()
   initHeaderLinks()
   initGoogleMap()
