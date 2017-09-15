@@ -14,10 +14,10 @@
   <meta property="og:description" content="Website of Northwalker" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://northwalker.github.io" />
-  <meta property="og:image" content="https://static.northwalker.site/bg/NewYork2016.jpg" />
+  <meta property="og:image" content="https://static.northwalker.site/bg/sunsetCover.jpg" />
   <meta property="og:site_name" content="Northwalker" />
   <link rel="manifest" href="manifest.json">
-  <link rel="icon" type="image/x-icon" href="https://static.northwalker.site/favicon/favicon.ico">
+  <link rel="icon" type="image/x-icon" href="https://static.northwalker.site/favicon.ico">
 
 </head>
 
@@ -164,7 +164,7 @@
         <div class="thumbnail"></div>
       </div>
       <div class="mail-wrapper">
-        <a class="mail-btn" href="mailto:northwalker28@gmail.com" >
+        <a class="mail-btn" href="mailto:northwalker28@gmail.com">
               <span class="text">Contact Me </span>
               <span class="envelope icon-envelope-o"></span>
             </a>
@@ -178,8 +178,8 @@
       <a class="icon-md icon-codepen" href="https://codepen.io/northwalker" target="_blank" aria-hidden="true" rel="noopener noreferrer"></a>
       <a class="icon-md icon-gear" href="https://info.northwalker.site/onlineTool/index.html" target="_blank" aria-hidden="true"
         rel="noopener noreferrer"></a>
-      <a class="icon-md icon-cloud" href="https://info.northwalker.site/taiwanInformation/index.html" target="_blank"
-        aria-hidden="true" rel="noopener noreferrer"></a>
+      <a class="icon-md icon-cloud" href="https://info.northwalker.site/taiwanInformation/index.html" target="_blank" aria-hidden="true"
+        rel="noopener noreferrer"></a>
       <a class="icon-md icon-home" href="https://www.northwalker.site" target="_blank" aria-hidden="true" rel="noopener noreferrer"></a>
       <a class="icon-md icon-twitter" href="https://twitter.com/northwalker28" target="_blank" aria-hidden="true" rel="noopener noreferrer"></a>
       <a class="icon-md icon-linkedin" href="https://tw.linkedin.com/in/de-yi-huang" target="_blank" aria-hidden="true" rel="noopener noreferrer"></a>
@@ -199,6 +199,9 @@
         m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
     })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
 
+    if (location.hostname == 'localhost') {
+      ga('set', 'sendHitTask', null);
+    }
     ga('create', 'UA-80918866-1', 'auto');
     ga('send', 'pageview');
   </script>

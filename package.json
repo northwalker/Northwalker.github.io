@@ -11,7 +11,8 @@
     "build": "cross-env NODE_ENV=production webpack --progress --hide-modules --config webpack.config.js",
     "postbuild": "npm run copyIndexHtml",
     "lint": "eslint ./src/js/app.js",
-    "copyIndexHtml": "cp ./dist/index.html ./"
+    "copyIndexHtml": "cp ./dist/index.html ./",
+    "deploy": "gsutil cp -a public-read index.html gs://www.northwalker.site/index.html"
   },
   "author": "Northwalker",
   "homepage": "https://github.com/northwalker/Northwalker.github.io#readme",
