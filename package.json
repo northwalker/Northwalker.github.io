@@ -4,7 +4,7 @@
   "description": "Github website for Northwalker",
   "main": "index.js",
   "scripts": {
-    "start": "npm run build && open 'http://localhost:8080' ",
+    "start": "npm run build && npm run open && npm run server ",
     "dev": "cross-env NODE_ENV=development webpack-dev-server --inline --open --hot --config webpack.config.js",
     "watch": "npm run dev",
     "prebuild": "rm -rf dist",
@@ -12,6 +12,8 @@
     "postbuild": "npm run copyIndexHtml",
     "lint": "eslint ./src/js/app.js",
     "copyIndexHtml": "cp ./dist/index.html ./",
+    "server": "go run server.go",
+    "open": "open 'http://localhost:8080'",
     "deploy": "gsutil cp -a public-read index.html gs://www.northwalker.site/index.html"
   },
   "author": "Northwalker",
