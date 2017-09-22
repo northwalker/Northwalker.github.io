@@ -35,7 +35,8 @@ function initGoogleMap () {
     return;
 
   const mapElement = document.querySelector('#map');
-  mapElement.style.height = '100vh';
+  // mapElement.style.height = '100vh';
+  mapElement.classList.add('active');
 
   const myMapLatLng = { lat: 25.023739, lng: 121.553004 };           // Liuzhangli Station
   const myMapJourneyKaffe = { lat: 25.080642, lng: 121.5660205 };    // Journey Kaffe
@@ -71,9 +72,9 @@ function initGoogleMap () {
  * initFavicon
  * @constructor
  */
-function initFavicon () {
-  document.querySelector('[rel=icon]').href = favicon || 'favicon.ico'
-}
+// function initFavicon () {
+//   document.querySelector('[rel=icon]').href = favicon || 'favicon.ico'
+// }
 
 /**
  * initHeaderLinks

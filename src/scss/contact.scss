@@ -8,7 +8,7 @@
     min-height: 250px;
     margin: 0 auto;
     text-align: center;
-    @media (max-width:768px){
+    @media (max-width: 768px) {
       width: initial;
     }
     .thumbnail-wrapper {
@@ -16,7 +16,7 @@
       width: 300px;
       height: 300px;
       padding: 25px;
-      @media (max-width:768px){
+      @media (max-width: 768px) {
         display: block;
         margin: 0 auto;
       }
@@ -29,14 +29,18 @@
         background-position: 50% 50%;
         vertical-align: top;
       }
+      &:hover {
+        .thumbnail {
+          // border: 1px solid #FFA500;
+        }
+      }
     }
-    .mail-wrapper{
+    .mail-wrapper {
       display: inline-block;
       width: 250px;
       margin: 120px auto 45px;
       vertical-align: top;
-
-      @media (max-width:768px){
+      @media (max-width: 768px) {
         display: block;
         margin: 30px auto 45px;
       }
@@ -50,7 +54,7 @@
         color: #FFFFFF;
         font-size: 28px;
         line-height: 60px;
-        transition: .3s ease ;
+        transition: .3s ease;
         cursor: pointer;
         .text {
           display: inline-block;
@@ -67,9 +71,37 @@
           border: 1px solid #FFA500; // rgb(255, 165, 0);
           box-shadow: -1px 5px 25px -5px rgba(255, 165, 0, 0.8);
           transform: translate3d(0, -2px, 0);
+          .envelope:before {
+            content: "\f1d9";
+          }
+          .envelope {
+            animation: passing 3s linear infinite
+          }
         }
       }
     }
+  }
+}
 
+@keyframes passing {
+  0% {
+    transform: translate(-32px, 32px);
+    opacity: 0;
+  }
+  25% {
+    transform: translate(0, 0);
+    opacity: 0.75;
+  }
+  50% {
+    transform: translate(32px, -32px);
+    opacity: 1;
+  }
+  75% {
+    transform: translate(64px, -64px);
+    opacity: 0.75;
+  }
+  100% {
+    transform: translate(96px, -96px);
+    opacity: 0;
   }
 }

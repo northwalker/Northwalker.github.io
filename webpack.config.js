@@ -22,6 +22,7 @@ const config = {
   entry: {
     // googleAnalytics: path.join(__dirname, './src/js/lib/googleAnalytics.js'),
     // googleMap: path.join(__dirname, './src/js/lib/googleMap.js'),
+    // sw: path.join(__dirname, './src/js/sw.js'),
     particles: path.join(__dirname, './src/js/lib/particles.js'),
     app: path.join(__dirname, './src/js/app.js')
   },
