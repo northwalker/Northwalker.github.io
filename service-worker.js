@@ -1,7 +1,6 @@
 /* service-worker.js */
 /* eslint-disable */
 
-
 // install
 self.addEventListener('install', event => {
   // console.log('SW installing...');
@@ -9,7 +8,7 @@ self.addEventListener('install', event => {
 
 // activate
 self.addEventListener('activate', event => {
-  console.log('SW activate');
+  // console.log('SW activate');
 });
 
 // fetch
