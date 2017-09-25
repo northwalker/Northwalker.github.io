@@ -69,6 +69,35 @@ function initGoogleMap () {
 }
 
 /**
+ * initStaticGoogleMap
+ * @constructor
+ */
+function initStaticGoogleMap () {
+  /* eslint-disable */
+
+  const url =
+    'https://maps.googleapis.com/maps/api/staticmap?' +
+    'center=25.080642,121.5660205' +
+    '&zoom=13' +
+    '&scale=2' +
+    '&size=' + 600 + 'x' + 600 +
+    '&format=png' +
+    '&key=AIzaSyCaRpcxDaf1NmM2qHplTgJR_0rKioMYygI'
+
+  const mapElement = document.querySelector('#map');
+  mapElement.classList.add('active');
+
+  mapElement.style.height = '75vh';
+  mapElement.style.backgroundImage = 'url('+url+')'
+  mapElement.style.backgroundSize = 'cover'
+  mapElement.style.backgroundPosition = '50% 50%'
+  mapElement.style.backgroundRepeat = 'no-repeat'
+
+
+  /* eslint-enable */
+}
+
+/**
  * initFavicon
  * @constructor
  */
@@ -95,7 +124,7 @@ function initHeaderLinks () {
  * @constructor
  */
 function init () {
-  const logsStyleString = 'color: #4994F2; font-size: 24px; font-weight: bold;'
+  const logsStyleString = 'color: #4994F2; font-size: 20px; font-weight: bold;'
   // eslint-disable-next-line no-console
   console.log('%c Hello! ^________________^', logsStyleString)
   // eslint-disable-next-line no-console
@@ -103,7 +132,8 @@ function init () {
   // initFavicon()
   initParticlesJS()
   initHeaderLinks()
-  initGoogleMap()
+  // initGoogleMap()
+  initStaticGoogleMap()
 }
 
 /**

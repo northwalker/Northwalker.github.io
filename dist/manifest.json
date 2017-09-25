@@ -5,7 +5,7 @@
   "short_name": "Northwalker",
   "theme_color": "#3475C0",
   "background_color": "#3A3636",
-  "display": "browser",
+  "display": "standalone",
   "orientation": "any",
   "icons": [
     {
@@ -26,6 +26,16 @@
     {
       "src": "img/touch/chrome-touch-icon-192x192.png",
       "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "img/256x256.png",
+      "sizes": "256x256",
+      "type": "image/png"
+    },
+    {
+      "src": "img/512x512.png",
+      "sizes": "512x512",
       "type": "image/png"
     }
   ]
