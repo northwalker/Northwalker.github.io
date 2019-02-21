@@ -31,9 +31,9 @@
         <a class="email-link" title="mail-link" href="mailto:northwalker28@gmail.com">northwalker28@gmail.com</a>
       </div>
       <div class="more">
-        <a href="/about" class="btn-link" title="about">About</a>
-        <a href="/skills" class="btn-link" title="skills">Skills</a>
-        <a href="/contact" class="btn-link" title="contact">Contact</a>
+        <a class="btn-link" title="about" @click="$emit('changeView', 'About')">About</a>
+        <a class="btn-link" title="skills" @click="$emit('changeView', 'Skills')">Skills</a>
+        <a class="btn-link" title="contact" @click="$emit('changeView', 'Contact')">Contact</a>
       </div>
     </div>
     <div

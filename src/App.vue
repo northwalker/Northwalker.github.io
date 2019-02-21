@@ -1,11 +1,36 @@
 <template>
   <div id="app">
     <div class="container">
-      <router-view />
-      <!-- <div class="copyright">&copy; Northwalker</div> -->
+      <!-- <router-view /> -->
+      <component :is="currentView" @changeView="changeView"></component>
     </div>
   </div>
 </template>
+<script>
+import Profile from '@/components/Profile'
+import About from '@/components/About'
+import Skills from '@/components/Skills'
+import Contact from '@/components/Contact'
+export default {
+  name: 'App',
+  components: {
+    Profile,
+    About,
+    Skills,
+    Contact
+  },
+  data () {
+    return {
+      currentView: 'Profile' // default
+    }
+  },
+  methods: {
+    changeView (v) {
+      this.currentView = v
+    }
+  }
+}
+</script>
 
 <style lang="scss">
 #app {

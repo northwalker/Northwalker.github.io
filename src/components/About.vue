@@ -10,9 +10,9 @@
       <li>Enthusiastic and interested in learning the latest information technology and wireless mobile communications.</li>
     </ul>
     <div class="back">
-      <a href="/" class="btn-link">Profile</a>
-      <a href="/skills" class="btn-link">Skills</a>
-      <a href="/contact" class="btn-link">Contact</a>
+      <a class="btn-link" title="profile" @click="$emit('changeView', 'Profile')">Profile</a>
+      <a class="btn-link" title="skills" @click="$emit('changeView', 'Skills')">Skills</a>
+      <a class="btn-link" title="contact" @click="$emit('changeView', 'Contact')">Contact</a>
     </div>
   </div>
 </template>

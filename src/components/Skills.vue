@@ -1,6 +1,6 @@
 <template>
   <div class="skills">
-    <h1 class="title">Skills</h1>
+    <h1 class="title">Skills with </h1>
     <div class="cards">
       <!--  -->
       <div key="Programming" class="card">
@@ -72,9 +72,9 @@
       <!--  -->
     </div>
     <div class="back">
-      <a href="/" class="btn-link" title="profile">Profile</a>
-      <a href="/about" class="btn-link" title="about">About</a>
-      <a href="/contact" class="btn-link" title="contact">Contact</a>
+      <a class="btn-link" title="profile" @click="$emit('changeView', 'Profile')">Profile</a>
+      <a class="btn-link" title="about" @click="$emit('changeView', 'About')">About</a>
+      <a class="btn-link" title="contact" @click="$emit('changeView', 'Contact')">Contact</a>
     </div>
   </div>
 </template>
@@ -88,7 +88,7 @@ export default {
 <style scoped lang="scss">
 .skills {
   .title {
-    text-align: left;
+    text-align: center;
     animation: fade 0.5s 0s 1 ease;
   }
   .cards {
