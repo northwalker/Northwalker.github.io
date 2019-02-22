@@ -71,14 +71,14 @@ export default {
     margin-right: 96px;
     text-align: left;
     .more {
-      margin-top: 80px;
+      margin-top: 100px;
     }
   }
   .cover {
     display: inline-block;
     vertical-align: top;
     width: 595px;
-    height: 395px;
+    height: 446px;
     transition: all 0.5s linear;
     background-repeat: no-repeat;
     background-position: center;
@@ -103,7 +103,7 @@ export default {
   .profile {
     .info {
       .more {
-        margin-top: 40px;
+        margin-top: 24px;
       }
     }
     .avatar {
