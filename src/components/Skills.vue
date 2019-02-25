@@ -4,8 +4,8 @@
     <div class="cards">
       <!--  -->
       <div key="Programming" class="card">
-        <div class="icon"><i class="fas fa-terminal"></i></div>
-        <h2 class="title">Programming Language</h2>
+        <div class="icon"><i class="fas fa-code"></i></div>
+        <h2 class="title">Programming Languages</h2>
         <div class="content">
           <div>JavaScript (ES6, ES7)</div>
           <div>NodeJS</div>
@@ -14,59 +14,64 @@
       </div>
       <!--  -->
       <div key="Frameworks" class="card">
-        <div class="icon"><i class="fas fa-code"></i></div>
-        <h2 class="title">JavaScript Frameworks and Libraries</h2>
+        <div class="icon"><i class="fas fa-terminal"></i></div>
+        <h2 class="title">Frameworks and Libraries</h2>
         <div class="content">
           <div>Vue.js</div>
           <div>React.js</div>
           <div>jQuery</div>
-          <div>Bootstrap</div>
-          <div>Express.js/Loopback.js</div>
-          <div>Higncharts.js</div>
+          <div>Express.js, Loopback.js</div>
+          <div>Higncharts.js, Chart.js</div>
         </div>
       </div>
       <!--  -->
       <div key="Markup" class="card">
         <div class="icon"><i class="fas fa-paint-brush"></i></div>
-        <h2 class="title">Markup and template</h2>
+        <h2 class="title">Markup and UI template</h2>
         <div class="content">
           <div>HTML5</div>
           <div>CSS3</div>
           <div>SASS/SCSS</div>
           <div>PostCSS</div>
+          <div>Bootstrap</div>
+          <div>Material Dedign</div>
         </div>
       </div>
       <!--  -->
       <div key="Devleopment" class="card">
         <div class="icon"><i class="fas fa-code-branch"></i></div>
-        <h2 class="title">Devleopment</h2>
+        <h2 class="title">Devleopment and CI/CD</h2>
         <div class="content">
           <div>Webpack</div>
           <div>gulp</div>
-          <div>git /gitflow</div>
+          <div>git / gitflow</div>
           <div>GitHub</div>
-        </div>
-      </div>
-      <!--  -->
-      <div key="CICD" class="card">
-        <div class="icon"><i class="fas fa-sync"></i></div>
-        <h2 class="title">CI/CD</h2>
-        <div class="content">
           <div>CitLab CI</div>
           <div>Circle CI</div>
         </div>
       </div>
       <!--  -->
+      <div key="CICD" class="card">
+        <div class="icon"><i class="fas fa-database"></i></div>
+        <h2 class="title">Backend</h2>
+        <div class="content">
+          <div>Firebase</div>
+          <div>CirRESTful API</div>
+          <div>Ngnix</div>
+          <div>MySQL</div>
+          <div>Linux / Ubuntu</div>
+        </div>
+      </div>
+      <!--  -->
       <div key="Experience" class="card">
-        <div class="icon"><i class="fas fa-bookmark"></i></div>
+        <div class="icon"><i class="fas fa-book"></i></div>
         <h2 class="title">Experience</h2>
         <div class="content">
           <div>SEO</div>
           <div>RWD</div>
           <div>PWA</div>
-          <div>Firebase</div>
-          <div>RESTful API</div>
-          <div>Nginx</div>
+          <div>Structure Data / JSON+LD</div>
+          <div>GA / GTAG</div>
         </div>
       </div>
       <!--  -->
