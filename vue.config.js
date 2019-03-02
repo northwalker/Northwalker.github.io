@@ -4,7 +4,7 @@ module.exports = {
     config
       .plugin('html')
       .tap(args => {
-        args[0].inlineSource = '.(js|css)$'
+        args[0].inlineSource = '.(js|css)$' // for HtmlWebpackInlineSourcePlugin
         return args
       })
   },
@@ -15,9 +15,5 @@ module.exports = {
   },
   css: {
     extract: false
-  },
-  publicPath: process.env.NODE_ENV === 'production'
-    ? '/dist/' // project name
-    : '/',
-  indexPath: '../index.html'
+  }
 }
