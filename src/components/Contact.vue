@@ -1,7 +1,7 @@
 <template>
   <div class="contact">
     <h1>Contact</h1>
-    <h2 class="hide">northwalker28@gmail.com</h2>
+    <Map />
     <p>
       mailto: <a class="email-link" title="mail-link" href="mailto:northwalker28@gmail.com">northwalker28@gmail.com</a>
     </p>
@@ -10,12 +10,17 @@
       <a class="btn-link" title="about" @click="$emit('changeView', 'About')">About</a>
       <a class="btn-link" title="skills" @click="$emit('changeView', 'Skills')">Skills</a>
     </div>
+    <h2 class="hide">northwalker28@gmail.com</h2>
   </div>
 </template>
 
 <script>
+import Map from '@/components/Map'
 export default {
-  name: 'Contact'
+  name: 'Contact',
+  components: {
+    Map
+  }
 }
 </script>
 

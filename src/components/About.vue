@@ -1,6 +1,6 @@
 <template>
   <div class="about">
-    <h1>About De-Yi Huang</h1>
+    <h1>About me</h1>
     <ul>
       <li>Over 5 year+ experience in web application development from backend to frontend.</li>
       <li>Experience in responsive web design (RWD), search engine optimization (SEO), improving performance and resolving cross browser compatibility.</li>
