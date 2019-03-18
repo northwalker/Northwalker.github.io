@@ -12,15 +12,14 @@ export default {
   },
   created () {},
   mounted () {
-    this.loadGoggleMapSDK().then(() => {
-      /* eslint-disable */
-      this.map = new google.maps.Map(document.getElementById('map'), {
-        center: { lat: 25.0390384, lng: 121.5647894 },
-        zoom: 14,
-        disableDefaultUI: true
-      })
-      /* eslint-enable */
-    })
+    if (window.google) {
+      this.initGoogleMap()
+    } else {
+      this.loadGoggleMapSDK()
+        .then(() => {
+          this.initGoogleMap()
+        })
+    }
   },
   methods: {
     loadGoggleMapSDK () {
@@ -39,6 +38,15 @@ export default {
           reject(err)
         }
       })
+    },
+    initGoogleMap () {
+      /* eslint-disable */
+      this.map = new google.maps.Map(document.getElementById('map'), {
+        center: { lat: 25.0390384, lng: 121.5647894 },
+        zoom: 14,
+        disableDefaultUI: true
+      })
+      /* eslint-enable */
     }
   }
 }
