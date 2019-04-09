@@ -1,7 +1,7 @@
 self.__precacheManifest = [
   {
-    "revision": "dce4234452fa4f14df00",
-    "url": "/dist/js/app.f5afa917.js"
+    "revision": "befa3d14f4614369a740",
+    "url": "/dist/js/app.ffcc573b.js"
   },
   {
     "revision": "51448ac9a6795cfd2a4e",
@@ -12,7 +12,7 @@ self.__precacheManifest = [
     "url": "/dist/img/green-blur.f52eb2d9.png"
   },
   {
-    "revision": "506fa669e1803af3a48dbc690fd2ee8a",
+    "revision": "675a7a09a8515abcfbcb5a6713048aee",
     "url": "/dist/index.html"
   },
   {

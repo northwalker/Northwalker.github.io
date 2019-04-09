@@ -3,7 +3,7 @@
     <div
       v-img-loader
       class="avatar"
-      data-src="https://storage.googleapis.com/static.northwalker.site/bg/greenCover.jpg"
+      data-src="https://storage.googleapis.com/northwalker/bg/greenCover.jpg"
     />
     <div class="info">
       <h1>De-Yi Huang</h1>
@@ -39,14 +39,13 @@
     <div
       v-img-loader
       class="cover"
-      data-src="https://storage.googleapis.com/static.northwalker.site/bg/greenCover.jpg"
+      data-src="https://storage.googleapis.com/northwalker/bg/greenCover.jpg"
     />
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-// https://storage.googleapis.com/static.northwalker.site/bg/greenCover.jpg
 
 import ImgLoader from '@/directives/ImgLoader'
 export default {
