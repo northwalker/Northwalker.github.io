@@ -6,7 +6,7 @@
       data-src="https://storage.googleapis.com/northwalker/bg/greenCover.jpg"
     />
     <div class="info">
-      <h1>De-Yi Huang</h1>
+      <h1>Luke Huang</h1>
       <h2>Hello, I'm a front-end engineer at Taipei, Taiwan.</h2>
       <div class="links">
         <!-- <a class="icon-link" target="_blank" rel="noopener noreferrer" href="" title=""><i class="fas fa-envelope"></i></a> -->

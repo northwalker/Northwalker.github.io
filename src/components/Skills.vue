@@ -17,8 +17,8 @@
         <div class="icon"><i class="fas fa-terminal"></i></div>
         <h2 class="title">Frameworks and Libraries</h2>
         <div class="content">
-          <div>Vue.js</div>
-          <div>React.js</div>
+          <div>Vue.js + vuex</div>
+          <div>React.js + redux</div>
           <div>jQuery</div>
           <div>Express.js, Loopback.js</div>
           <div>Higncharts.js, Chart.js</div>
