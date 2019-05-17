@@ -1,8 +1,8 @@
 // const HtmlWebpackInlineSourcePlugin = require('html-webpack-inline-source-plugin')
 module.exports = {
   chainWebpack: config => {
-    config
-      .plugin('html')
+    // config
+      // .plugin('html')
       // .tap(args => {
       //   args[0].inlineSource = '.(js|css)$' // for HtmlWebpackInlineSourcePlugin
       //   return args
