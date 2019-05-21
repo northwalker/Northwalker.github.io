@@ -83,7 +83,7 @@ export default {
     background-position: center;
     background-size: cover;
     background-color: #ffffff;
-    background-image: url("../assets/images/green-blur.png");
+    background-image: url("../assets/images/green-blur-25.jpg");
     // background-image: url('https://storage.googleapis.com/static.northwalker.site/bg/greenCover.jpg');
     filter: blur(25px);
   }
@@ -117,7 +117,7 @@ export default {
       background-position: center;
       background-size: cover;
       background-color: #ffffff;
-      background-image: url("../assets/images/green-blur.png");
+      background-image: url("../assets/images/green-blur-25.jpg");
       // background-image: url('https://storage.googleapis.com/static.northwalker.site/bg/greenCover.jpg');
       filter: blur(25px);
     }
