@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/dist/precache-manifest.aa5af73df1f8f43034510a4285466e01.js"
+  "/dist/precache-manifest.fcd51528da0836b111e517c56c774dd4.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "northwalker-github-io"});
