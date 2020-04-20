@@ -4,7 +4,9 @@
   "description": "Github website for Northwalker",
   "main": "index.js",
   "scripts": {
-    "serve": "http-server ./"
+    "serve": "http-server ./public",
+    "serve:build": "http-server ./",
+    "build": "node minify.js"
   },
   "author": "Northwalker",
   "homepage": "https://github.com/northwalker/Northwalker.github.io#readme",
@@ -16,8 +18,10 @@
     "type": "git",
     "url": "git+https://github.com/northwalker/Northwalker.github.io.git"
   },
-  "dependencies": {
+  "dependencies": {},
+  "devDependencies": {
+    "@node-minify/core": "^5.3.0",
+    "@node-minify/html-minifier": "^5.3.0",
     "http-server": "^0.12.1"
-  },
-  "devDependencies": {}
+  }
 }
