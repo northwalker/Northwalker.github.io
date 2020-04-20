@@ -4,16 +4,9 @@
   "description": "Github website for Northwalker",
   "main": "index.js",
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "prebuild": "rm ./index.html",
-    "postbuild": "cp ./dist/index.html ./",
-    "lint": "vue-cli-service lint",
-    "test": "npm run test:unit -- --coverage --no-cache",
-    "test:e2e": "vue-cli-service test:e2e",
-    "test:unit": "vue-cli-service test:unit",
-    "ci:lint": "vue-cli-service lint & eslint ./src/ --format junit --output-file ./reports/junit/eslint.xml",
-    "ci:test": "vue-cli-service test:unit --no-cache --coverage --ci --runInBand --reporters=default --reporters=jest-junit"
+    "serve": "http-server ./public",
+    "serve:build": "http-server ./",
+    "build": "node minify.js"
   },
   "author": "Northwalker",
   "homepage": "https://github.com/northwalker/Northwalker.github.io#readme",
@@ -25,29 +18,10 @@
     "type": "git",
     "url": "git+https://github.com/northwalker/Northwalker.github.io.git"
   },
-  "dependencies": {
-    "core-js": "2.6.5",
-    "register-service-worker": "^1.6.2",
-    "vue": "^2.6.10",
-    "vue-router": "^3.0.3"
-  },
+  "dependencies": {},
   "devDependencies": {
-    "@vue/cli-plugin-babel": "^3.8.0",
-    "@vue/cli-plugin-e2e-cypress": "^3.8.0",
-    "@vue/cli-plugin-eslint": "^3.8.0",
-    "@vue/cli-plugin-pwa": "^3.8.0",
-    "@vue/cli-plugin-unit-jest": "^3.8.0",
-    "@vue/cli-service": "^3.8.0",
-    "@vue/eslint-config-standard": "^4.0.0",
-    "@vue/test-utils": "1.0.0-beta.29",
-    "babel-core": "7.0.0-bridge.0",
-    "babel-eslint": "^10.0.1",
-    "babel-jest": "^23.6.0",
-    "eslint": "^5.16.0",
-    "eslint-plugin-vue": "^5.0.0",
-    "html-webpack-inline-source-plugin": "0.0.10",
-    "node-sass": "^4.9.0",
-    "sass-loader": "^7.1.0",
-    "vue-template-compiler": "^2.5.21"
+    "@node-minify/core": "^5.3.0",
+    "@node-minify/html-minifier": "^5.3.0",
+    "http-server": "^0.12.1"
   }
 }
