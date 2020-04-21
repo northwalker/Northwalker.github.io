@@ -8,11 +8,11 @@ minify({
   options: {
     minifyJS: true,
     minifyCSS: true,
-    removeAttributeQuotes: true
+    removeAttributeQuotes: true,
   },
-  callback: function(err, min) {
+  callback: function (err, min) {
     if (err) console.error(err);
 
-    console.log("HTML minified.");
-  }
+    console.log("HTML minified. Check </Body> and </html> !!!");
+  },
 });
