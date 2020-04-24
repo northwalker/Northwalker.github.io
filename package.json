@@ -1,6 +1,6 @@
 {
   "name": "northwalker-github-io",
-  "version": "3.0.0",
+  "version": "4.0.0",
   "description": "Github website for Northwalker",
   "main": "index.js",
   "scripts": {
@@ -20,8 +20,7 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "@node-minify/core": "^5.3.0",
-    "@node-minify/html-minifier": "^5.3.0",
+    "html-minifier": "^4.0.0",
     "http-server": "^0.12.1"
   }
 }
