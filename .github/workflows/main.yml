@@ -1,0 +1,29 @@
+name: Github Action CI
+
+on: [push, pull_request]
+
+jobs:
+  test-and-build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Hello World
+        run: echo Hello world!
+      # - name: Echo env
+      #   env:
+      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      #   run: |
+      #     echo "Github Token ${GITHUB_TOKEN}"
+      #     echo "Github Ref ${GITHUB_REF}"
+      #     echo "Github SHA ${GITHUB_SHA}"
+      # - name: Checkout
+      #   uses: actions/checkout@v2
+      # - name: Use Node.js
+      #   uses: actions/setup-node@v1
+      #   with:
+      #     node-version: "12.x"
+      # - name: Install dependencies
+      #   run: yarn install
+      # - name: Test
+      #   run: yarn test
+      # - name: Build
+      #   run: yarn build
