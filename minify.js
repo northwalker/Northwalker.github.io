@@ -1,18 +1,18 @@
-const minify = require("@node-minify/core");
-const htmlMinifier = require("@node-minify/html-minifier");
+var fs = require("fs");
+var path = require("path");
+var minify = require("html-minifier").minify;
 
-minify({
-  compressor: htmlMinifier,
-  input: "./public/index.html",
-  output: "./index.html",
-  options: {
+try {
+  var data = fs.readFileSync("./public/index.html", "utf8");
+  var result = minify(data, {
+    collapseWhitespace: true,
     minifyJS: true,
     minifyCSS: true,
     removeAttributeQuotes: true,
-  },
-  callback: function (err, min) {
-    if (err) console.error(err);
-
-    console.log("HTML minified. Check </Body> and </html> !!!");
-  },
-});
+    removeComments: true,
+  });
+  console.log("HTML minified.", result);
+  fs.writeFileSync("index.html", result);
+} catch (e) {
+  console.log("Error:", e.stack);
+}
