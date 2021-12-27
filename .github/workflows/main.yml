@@ -1,13 +1,13 @@
-name: Github Action CI
+name: GitHub Pages CI/CD
 
 on: [push, pull_request]
 
 jobs:
-  test-and-build:
+  build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Hello World
-        run: echo Hello world!
+      - name: Hello Github Actions
+        run: echo Hello Github Actions!
       # - name: Echo env
       #   env:
       #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -15,15 +15,26 @@ jobs:
       #     echo "Github Token ${GITHUB_TOKEN}"
       #     echo "Github Ref ${GITHUB_REF}"
       #     echo "Github SHA ${GITHUB_SHA}"
-      # - name: Checkout
-      #   uses: actions/checkout@v2
-      # - name: Use Node.js
-      #   uses: actions/setup-node@v1
-      #   with:
-      #     node-version: "12.x"
-      # - name: Install dependencies
-      #   run: yarn install
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Use Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: "14"
+          cache: "npm"
+      - name: Install dependencies
+        run: npm install
       # - name: Test
-      #   run: yarn test
-      # - name: Build
-      #   run: yarn build
+      #   run: npm run test
+      # - name: Lint
+      #   run: npm run lint
+      - name: Build
+        run: npm run build
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        if: ${{ github.ref == 'refs/heads/master' }}
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: gh-pages
+          publish_dir: ./public
+          force_orphan: true
