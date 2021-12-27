@@ -12,7 +12,7 @@ try {
     removeComments: true,
   });
   console.log("HTML minified.", result);
-  fs.writeFileSync("index.html", result);
+  fs.writeFileSync("./dist/index.html", result);
 } catch (e) {
   console.log("Error:", e.stack);
 }

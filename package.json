@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "serve": "http-server ./public",
-    "serve:build": "http-server ./",
+    "serve:build": "http-server ./dist",
     "build": "node minify.js"
   },
   "author": "Northwalker",
