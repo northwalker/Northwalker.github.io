@@ -1,3 +1,4 @@
+"use strict";
 var fs = require("fs");
 var path = require("path");
 var minify = require("html-minifier").minify;
@@ -11,8 +12,14 @@ try {
     removeAttributeQuotes: true,
     removeComments: true,
   });
-  console.log("HTML minified.", result);
-  fs.writeFileSync("index.html", result);
+
+  result = result.replace(/__SHA_SHORT__/g, process.env.SHA_SHORT || "");
+
+  console.log("========== HTML minified ==========");
+  console.log(result);
+  console.log("========== HTML minified ==========");
+
+  fs.writeFileSync("./dist/index.html", result);
 } catch (e) {
   console.log("Error:", e.stack);
 }
