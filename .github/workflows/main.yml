@@ -31,7 +31,7 @@ jobs:
       - name: PreBuild
         run: mkdir dist
       - name: Build
-        run: npm run build
+        run: SHA_SHORT=${GITHUB_SHA::7} npm run build
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         # if: ${{ github.ref == 'refs/heads/master' }}

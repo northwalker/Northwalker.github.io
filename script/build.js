@@ -14,7 +14,10 @@ try {
   });
 
   // TODO: update to build flow
-  result = result.replace(/__VERSION__/g, process.env.version || "4.0.2-beta");
+  result = result.replace(
+    /__VERSION__/g,
+    process.env.SHA_SHORT || "4.0.2-beta"
+  );
 
   console.log("========== HTML minified ==========");
   console.log(result);
