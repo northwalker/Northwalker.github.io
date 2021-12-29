@@ -20,10 +20,10 @@
     "url": "git+https://github.com/northwalker/Northwalker.github.io.git"
   },
   "dependencies": {
-    "amphtml-validator": "^1.0.35"
+    "amphtml-validator": "^1.0.35",
+    "html-minifier": "^4.0.0"
   },
   "devDependencies": {
-    "html-minifier": "^4.0.0",
     "http-server": "^14.0.0"
   }
 }
