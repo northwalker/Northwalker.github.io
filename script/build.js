@@ -13,11 +13,7 @@ try {
     removeComments: true,
   });
 
-  // TODO: update to build flow
-  result = result.replace(
-    /__VERSION__/g,
-    process.env.SHA_SHORT || "4.0.2-beta"
-  );
+  result = result.replace(/__SHA_SHORT__/g, process.env.SHA_SHORT || "");
 
   console.log("========== HTML minified ==========");
   console.log(result);
