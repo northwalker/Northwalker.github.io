@@ -6,7 +6,8 @@
   "scripts": {
     "serve": "http-server ./public",
     "serve:build": "http-server ./dist",
-    "build": "node minify.js"
+    "build": "node ./script/build.js",
+    "test": "node ./script/test.js"
   },
   "author": "Northwalker",
   "homepage": "https://github.com/northwalker/Northwalker.github.io#readme",
@@ -18,7 +19,9 @@
     "type": "git",
     "url": "git+https://github.com/northwalker/Northwalker.github.io.git"
   },
-  "dependencies": {},
+  "dependencies": {
+    "amphtml-validator": "^1.0.35"
+  },
   "devDependencies": {
     "html-minifier": "^4.0.0",
     "http-server": "^14.0.0"

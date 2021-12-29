@@ -1,3 +1,4 @@
+"use strict";
 var fs = require("fs");
 var path = require("path");
 var minify = require("html-minifier").minify;
